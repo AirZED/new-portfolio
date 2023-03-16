@@ -1,0 +1,65 @@
+.home {
+    background: linear-gradient(rgb(20, 13, 44), rgba(5, 79, 94, 1), rgb(16, 1, 22)), radial-gradient(circle at 30% 50%, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 20%, rgba(255, 0, 0, 0) 50%), radial-gradient(circle at 70% 30%, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 20%, rgba(255, 0, 0, 0) 50%);
+    background-blend-mode: multiply, normal, normal;
+
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+.topic {
+    line-height: 9rem;
+    font-weight: 500;
+    font-size: 9rem;
+    margin: 0;
+}
+
+.topic span {
+    color: rgb(223, 202, 163);
+}
+
+.topic:hover {
+    /* animation-name: shake; */
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+.summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.summary p {
+    font-size: 1rem;
+    width: 30rem;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

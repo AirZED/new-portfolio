@@ -1,0 +1,40 @@
+.about {
+    padding: 6rem 2rem 6rem 2rem;
+    /* height: 60vh; */
+    color: black;
+    background-color: #0f0315;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+}
+
+.about>* {
+    color: white;
+}
+
+.about>.textArea {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+
+}
+
+
+.about>.textArea>img {
+    height: 20rem;
+    border-radius: 50%;
+    transform: rotate(-30deg);
+}
+
+.text>div {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.text>div>span {
+    color: orange;
+}
+
+.text div:first-child {
+    font-size: 1.3rem;
+    font-weight: 500;
+}

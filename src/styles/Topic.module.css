@@ -1,0 +1,7 @@
+.topic {
+    border: 2px solid orange;
+    display: inline;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-weight: 500;
+}

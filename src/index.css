@@ -1,0 +1,32 @@
+:root {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  --border-radius: 15px;
+  --light-bg: #ccc;
+  --primary-color: #140d2c;
+  --backdrop: #000000de;
+  color: white;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}

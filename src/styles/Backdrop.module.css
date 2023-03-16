@@ -1,0 +1,11 @@
+.backdrop {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: var(--backdrop);
+    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}

@@ -1,0 +1,18 @@
+.button {
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    height: 2rem;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    transition: all 0.3s ease-out;
+}
+
+.button:hover {
+    transform: translateX(.3rem);
+}
