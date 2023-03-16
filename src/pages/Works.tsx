@@ -8,6 +8,12 @@ import Project from "../components/Project";
 import data from "../assets/projects_data.json";
 console.log(data);
 
+interface ProjectType {
+  topic: string;
+  description: string;
+  id: number;
+}
+
 const Works = (): JSX.Element => {
   return <div className={style.work}></div>;
 };

@@ -27,7 +27,9 @@ const Nav = () => {
   const CloseNav = () => {
     return (
       <nav className={navClassName}>
-        <h1 className={style.name}>MFONISO UKPABIO</h1>
+        <h1 className={style.name}>
+          MFONISO <span>UKPABIO</span>
+        </h1>
         <div>
           <Button content="Contact Me" />
           <CiCircleMore className={style.icon} onClick={openNavHandler} />
@@ -54,17 +56,20 @@ const Nav = () => {
   const OpenNav = () => {
     return (
       <nav className={style.nav}>
-        <div className={style.open}>
-          <div className={style.header}>
-            <h1 className={style.name}>MFONISO UKPABIO</h1>
-            <CgClose className={style.icon} onClick={openNavHandler} />
+        <nav className={style.more}>
+          <div className={style.open}>
+            <div className={style.header}>
+              <h1 className={style.name}>MFONISO UKPABIO</h1>
+              <CgClose className={style.icon} onClick={openNavHandler} />
+            </div>
+            <EachLink text="HOME" />
+            <EachLink text="SERVICES" />
+            <EachLink text="WORKS" />
+            <EachLink text="ABOUT" />
+            <EachLink text="CONTACT" />
           </div>
-          <EachLink text="HOME" />
-          <EachLink text="SERVICES" />
-          <EachLink text="WORKS" />
-          <EachLink text="ABOUT" />
-          <EachLink text="CONTACT" />
-        </div>
+        </nav>
+        <div className={style['more-info']}>food</div>
       </nav>
     );
   };

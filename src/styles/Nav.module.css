@@ -1,9 +1,7 @@
 .nav {
-    background: #f8f8f8;
 
     display: flex;
     flex-direction: column;
-    border-radius: var(--border-radius);
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -11,10 +9,27 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 10000;
-    height: 50vh;
+    height: auto;
     width: 98%;
     padding: 0 !important;
+    gap: .5rem;
+}
 
+.nav .more {
+    background: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    height: 50vh;
+    width: 100%;
+}
+
+.nav .more-info {
+    background: #f8f8f8;
+    border-radius: var(--border-radius);
+    height: 4rem;
+    padding: 0.3rem 2rem;
+    width: 100%;
 }
 
 
@@ -24,7 +39,7 @@
     top: 0;
     right: 0;
     left: 0;
-    background: #0a0e1b;
+    background: transparent;
     width: 100%;
     height: 4rem;
     flex-direction: row;
@@ -49,21 +64,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: .5rem 2rem;
 }
 
-.header .name {
-    color: #080f1e;
-}
 
 .name {
-    font-size: 1.8rem;
-    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.name>span {
+    color: #dfcaa3;
 }
 
 
 /* OPEN NAV */
-.nav>.open {
+.nav>.more>.open {
     position: relative;
     display: flex;
     list-style: none;
@@ -75,7 +91,7 @@
     grid-template-columns: repeat(5, 1fr);
 }
 
-.nav>.open * {
+.nav>.more * {
     color: var(--primary-color);
 }
 
@@ -123,8 +139,6 @@
     animation-name: move-up-and-back;
     animation-duration: .5s;
     animation-fill-mode: forwards;
-
-
 }
 
 .nav li>div>.link-icon {
@@ -161,5 +175,47 @@
         opacity: 1;
         bottom: auto;
         color: red;
+    }
+}
+
+
+@media (max-width:950px) {
+
+
+    .nav .more {
+        height: 60vh;
+        align-items: baseline;
+
+    }
+
+    .nav .more>.open {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+
+    .nav li {
+
+
+        border-left: 1px solid var(--primary-color);
+        border-bottom: 1px solid var(--primary-color);
+    }
+
+}
+
+@media (max-width:700px) {
+    .nav .more {
+        height: auto;
+
+    }
+
+    .nav .more>.open {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        height: auto;
+    }
+
+    .header {
+        position: static;
     }
 }
