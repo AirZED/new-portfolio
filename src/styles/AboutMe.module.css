@@ -39,3 +39,19 @@
     font-size: 1.3rem;
     font-weight: 500;
 }
+
+@media (max-width:1200px) {
+    .textArea {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:700px) {
+    .about {
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width:320px) {}

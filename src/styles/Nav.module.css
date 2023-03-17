@@ -188,6 +188,7 @@
 
     }
 
+
     .nav .more>.open {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -204,6 +205,15 @@
 }
 
 @media (max-width:700px) {
+    .nav.close {
+        padding: 0 .8rem !important;
+    }
+
+    .nav.close h1 {
+        font-size: 1rem;
+    }
+
+
     .nav .more {
         height: auto;
 

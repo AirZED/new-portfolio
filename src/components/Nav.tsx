@@ -69,7 +69,7 @@ const Nav = () => {
             <EachLink text="CONTACT" />
           </div>
         </nav>
-        <div className={style['more-info']}>food</div>
+        <div className={style["more-info"]}>food</div>
       </nav>
     );
   };
