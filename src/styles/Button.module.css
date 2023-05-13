@@ -14,5 +14,5 @@
 }
 
 .button:hover {
-    transform: translateX(.3rem);
+    transform: translateY(.3rem);
 }

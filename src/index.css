@@ -1,9 +1,12 @@
 :root {
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Manrope', sans-serif;
   line-height: 1.5;
   --border-radius: 15px;
-  --light-bg: #ccc;
-  --primary-color: #140d2c;
+  --white-bg: #fff;
+  --light-bg: #f8f8f8;
+  --primary-color: #191426;
+  --secondary-color: #dfcaa3;
   --backdrop: #000000de;
   color: white;
   text-rendering: optimizeLegibility;
@@ -11,7 +14,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 body {

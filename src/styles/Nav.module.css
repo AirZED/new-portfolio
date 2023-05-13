@@ -74,7 +74,7 @@
 }
 
 .name>span {
-    color: #dfcaa3;
+    color: var(--secondary-color);
 }
 
 

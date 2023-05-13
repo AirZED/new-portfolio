@@ -1,7 +1,8 @@
 .topic {
-    border: 2px solid orange;
+    border: 2px solid var(--secondary-color);
     display: inline;
     border-radius: 4px;
     padding: 0.5rem;
     font-weight: 500;
+    color: var(--primary-color);
 }

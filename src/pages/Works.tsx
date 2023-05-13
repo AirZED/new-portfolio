@@ -15,7 +15,11 @@ interface ProjectType {
 }
 
 const Works = (): JSX.Element => {
-  return <div className={style.work}></div>;
+  return (
+    <div className={style.work}>
+      <Project />
+    </div>
+  );
 };
 
 export default Works;

@@ -1,15 +1,14 @@
 .about {
     padding: 6rem 2rem 6rem 2rem;
     /* height: 60vh; */
-    color: black;
-    background: linear-gradient(rgb(20, 13, 44), rgba(5, 79, 94, 1), rgb(16, 1, 22));
-    background-blend-mode: multiply, normal, normal;
+    color: var(--primary-color);
+    background: var(--white-bg);
     display: grid;
     grid-template-columns: 0.3fr 1fr;
 }
 
 .about>* {
-    color: white;
+    color: var(--primary-color);
 }
 
 .about>.textArea {
@@ -31,8 +30,12 @@
     text-align: left;
 }
 
+.text div {
+    font-weight: 600;
+}
+
 .text>div>span {
-    color: orange;
+    font-weight: 800;
 }
 
 .text div:first-child {

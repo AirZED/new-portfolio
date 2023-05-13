@@ -1,4 +1,4 @@
 .work {
-    /* height: auto; */
+    background-color: var(--light-bg);
     height: 100vh;
 }
