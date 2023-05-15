@@ -1,6 +1,6 @@
 import { useEffect, useState, FC } from "react";
 
-const useAnimate = (word: string): string[] => {
+const useAnimate = (word: string): string => {
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -17,9 +17,7 @@ const useAnimate = (word: string): string[] => {
     return () => clearInterval(intervalId);
   }, [currentIndex, word]);
 
-  const splitedResult = currentText.split(" ");
-
-  return splitedResult;
+  return currentText;
 };
 
 export default useAnimate;

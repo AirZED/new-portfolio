@@ -1,15 +1,16 @@
 .about {
     padding: 6rem 2rem 6rem 2rem;
     /* height: 60vh; */
-    color: var(--white-bg);
+    color: var(--dark-bg);
     /* background: var(--white-bg); */
-    background:#020014;
+    background: var(--light-bg);
     display: grid;
     grid-template-columns: 0.3fr 1fr;
+    border-top: 1px solid var(--dark-bg);
 }
 
-.about>* {
-    color: var(--white-bg);
+.about>* { 
+    /* color: var(--white-bg); */
 }
 
 .about>.textArea {

@@ -1,3 +1,6 @@
+//importing from react-router-dom
+// import { HashRouter } from "react-router-dom";
+
 // importing custom hook
 import useAnimate from "../hooks/useAnimate";
 
@@ -9,25 +12,36 @@ import Button from "../components/Button";
 
 interface Props {
   word: string;
+  className?: string;
 }
+
+const MenuItem = (props: Props): JSX.Element => {
+  return (
+    <div id="menu-item">
+      <div className={style.dot}></div>
+      <h1>{props.word}</h1>
+    </div>
+  );
+};
 
 const Home = () => {
   // calling currentText hook
-  const currentText = useAnimate("FRONTEND & SERVER SIDE WEB DEVELOPER");
-
-  const displayTopic = (
-    <h1 className={style.topic}>
-      <span>{currentText[0]}</span> {currentText[1]}{" "}
-      <span>{currentText[2]}</span> <span>{currentText[3]}</span>{" "}
-      {currentText[4]} {currentText[5]}
-    </h1>
-  );
+  const currentText = useAnimate("Mfoniso Ukpabio");
 
   return (
     <div className={style.home}>
-      {displayTopic}
+      <div className={style.topic}>
+        <h1>{currentText}</h1>
+        <p>BACKEND AND FRONTEND WEB DEVELOPER</p>
+      </div>
 
-      <div className={style.summary}>
+      <div className={style.menu}>
+        <MenuItem word="Info" />
+        <MenuItem word="Projects" />
+        <MenuItem word="Contacts" />
+      </div>
+
+      {/* <div className={style.summary}>{
         <p className={style.skill}>
           My skills include developing and maintaining databases, building
           RESTful APIs, ensuring security and data integrity, and
@@ -37,8 +51,8 @@ const Home = () => {
         <div>
           <p className={style.stack}>NODE, EXPRESS JS, REACT JS AND MONGO DB</p>
           <Button content="Contact Me" />
-        </div>
-      </div>
+        </div>}
+      </div> */}
     </div>
   );
 };
