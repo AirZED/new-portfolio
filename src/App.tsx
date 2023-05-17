@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 // Importing components
-import Home from "./pages/Home";
+import Home from "./sections/Home";
 import Nav from "./components/Nav";
-import AboutMe from "./pages/AboutMe";
-import SelectedProjects from "./pages/SelectedProjects";
+import AboutMe from "./sections/AboutMe";
+import SelectedProjects from "./sections/SelectedProjects";
 
 // importing style
 import "./App.css";

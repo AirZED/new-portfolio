@@ -6,7 +6,7 @@ import Project from "../components/Project";
 import Topic from "../components/Topic";
 
 // importing data
-import data from "../assets/projects_data.json";
+import projectData from "../assets/projects_data";
 
 interface ProjectType {
   topic: string;
@@ -19,9 +19,25 @@ const SelectedProjects = (): JSX.Element => {
     <div className={style.projects} id="projects">
       <div className={style["projects-header"]}>
         <Topic content={"Some Selected Projects"} />
-        <p>A handful of my favorites</p>
+        <p>Build year</p>
       </div>
-      <Project /> <Project /> <Project /> <Project /> <Project />
+
+      {projectData.map((el) => (
+        <Project
+          topic={el.topic}
+          image={el.image}
+          doneAt={el.buildDate}
+          stack={el.stack}
+        />
+      ))}
+
+      <div className={style["see-more-projects"]}>
+        <h2>Want to see more?</h2>
+        <p>
+          Reach me out at{" "}
+          <a href="mailto:ukpabiomfoniso@gmail.com">ukpabiomfoniso@gmail.com</a>
+        </p>
+      </div>
     </div>
   );
 };
