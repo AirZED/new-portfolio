@@ -1,5 +1,5 @@
 //importing from react-router-dom
-// import { HashRouter } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 // importing custom hook
 import useAnimate from "../hooks/useAnimate";
@@ -12,15 +12,16 @@ import Button from "../components/Button";
 
 interface Props {
   word: string;
+  to: string;
   className?: string;
 }
 
 const MenuItem = (props: Props): JSX.Element => {
   return (
-    <div id="menu-item">
+    <HashLink to={props.to} id="menu-item">
       <div className={style.dot}></div>
       <h1>{props.word}</h1>
-    </div>
+    </HashLink>
   );
 };
 
@@ -36,9 +37,9 @@ const Home = () => {
       </div>
 
       <div className={style.menu}>
-        <MenuItem word="Info" />
-        <MenuItem word="Projects" />
-        <MenuItem word="Contacts" />
+        <MenuItem word="Info" to="/#info" />
+        <MenuItem word="Projects" to="/#projects" />
+        <MenuItem word="Contacts" to="/#contacts" />
       </div>
 
       {/* <div className={style.summary}>{

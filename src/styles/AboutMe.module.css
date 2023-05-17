@@ -1,39 +1,44 @@
 .about {
-    padding: 6rem 2rem 6rem 2rem;
-    /* height: 60vh; */
+    padding: 4rem 4rem 6rem 4rem;
     color: var(--dark-bg);
-    /* background: var(--white-bg); */
     background: var(--light-bg);
-    display: grid;
-    grid-template-columns: 0.3fr 1fr;
     border-top: 1px solid var(--dark-bg);
+    height: auto;
 }
 
-.about>* { 
+.about>* {
     /* color: var(--white-bg); */
+}
+
+.about .topic {
+    margin: 2rem;
 }
 
 .about>.textArea {
     display: flex;
     gap: 2rem;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 2rem 0;
 
 }
 
 
 .about>.textArea>img {
     height: 20rem;
-    border-radius: 50%;
-    transform: rotate(-30deg);
+    border-radius: 10px;
+    ;
+    /* transform: rotate(-30deg); */
 }
 
-.text>div {
-    margin-bottom: 1rem;
-    text-align: left;
+.about .text {
+    width: 60%;
 }
-
 .text div {
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
 }
 
 .text>div>span {
@@ -41,7 +46,7 @@
 }
 
 .text div:first-child {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
@@ -53,10 +58,29 @@
 
 @media (max-width:700px) {
     .about {
-        grid-template-columns: 1fr;
+        padding: 2rem 1rem 2rem 1rem;
         align-items: center;
         justify-content: center;
     }
+
+
+    .about>.textArea {
+        margin: 0
+    }
+
+    .about .text {
+        width: 90%
+    }
+
+    .text>div {
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    .text>div:first-child{
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
 }
 
 @media (max-width:320px) {}

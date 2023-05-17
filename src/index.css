@@ -6,8 +6,9 @@
   --border-radius: 15px;
   --dark-bg: #3d3d3d;
   --light-bg: #e5e5e5;
+  --lessdark-bg: #646464;
   --backdrop: #000000de;
-  color: white;
+  --nav-bg: #f8f8f8;
   text-rendering: optimizeLegibility;
 }
 
@@ -19,6 +20,10 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
 }
 
 

@@ -16,7 +16,7 @@ interface ProjectType {
 
 const Works = (): JSX.Element => {
   return (
-    <div className={style.work}>
+    <div className={style.work} id="projects">
       <Project />
     </div>
   );

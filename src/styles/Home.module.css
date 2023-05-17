@@ -1,9 +1,7 @@
 .home {
     background: var(--light-bg);
     min-height: 100vh;
-    padding: 8rem 2rem 0 2rem;
-
-
+    padding: 8rem 4rem 0 4rem;
 }
 
 .home * {
@@ -42,16 +40,23 @@
 
 .menu>*>div {
     display: none;
+    transition: all 4s;
 }
 
 .menu>*:hover div {
     display: block;
+
 }
 
 .menu>*:hover h1 {
-    color: #646464;
+    color: var(--lessdark-bg);
 
 }
+
+.menu>*:hover .dot {
+    background: var(--lessdark-bg);
+}
+
 
 .dot {
     width: .7rem;
