@@ -1,8 +1,9 @@
 // importing style
-import style from "./../styles/Work.module.css";
+import style from "./../styles/SelectedProjects.module.css";
 
 // importing supporting components
 import Project from "../components/Project";
+import Topic from "../components/Topic";
 
 // importing data
 import data from "../assets/projects_data.json";
@@ -14,12 +15,13 @@ interface ProjectType {
   id: number;
 }
 
-const Works = (): JSX.Element => {
+const SelectedProjects = (): JSX.Element => {
   return (
     <div className={style.work} id="projects">
+      <Topic content={"Some Selected Projects"} />
       <Project />
     </div>
   );
 };
 
-export default Works;
+export default SelectedProjects;

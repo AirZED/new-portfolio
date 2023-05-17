@@ -54,10 +54,19 @@
     align-items: center;
 }
 
+.nav-icons>* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
 .icon {
     cursor: pointer;
     font-size: 2rem;
 }
+
+
 
 .header {
     position: absolute;

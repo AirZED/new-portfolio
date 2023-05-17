@@ -8,7 +8,7 @@ interface ButtonProps {
 const Button = ({ content }: ButtonProps): JSX.Element => {
   return (
     <button className={style.button} type="button">
-      {content}✨
+      {content}
     </button>
   );
 };

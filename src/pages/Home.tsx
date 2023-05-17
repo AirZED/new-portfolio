@@ -37,8 +37,8 @@ const Home = () => {
       </div>
 
       <div className={style.menu}>
-        <MenuItem word="Info" to="/#info" />
-        <MenuItem word="Projects" to="/#projects" />
+        <MenuItem word="About Mfoniso" to="/#info" />
+        <MenuItem word="Some Selected Projects" to="/#projects" />
         <MenuItem word="Contacts" to="/#contacts" />
       </div>
 

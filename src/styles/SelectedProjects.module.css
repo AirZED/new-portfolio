@@ -1,4 +1,5 @@
 .work {
+    padding: 0rem 4rem 4rem 4rem;
     background-color: var(--light-bg);
     height: 100vh;
 }

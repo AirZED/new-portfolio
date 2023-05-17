@@ -4,7 +4,7 @@ import { useState } from "react";
 import Home from "./pages/Home";
 import Nav from "./components/Nav";
 import AboutMe from "./pages/AboutMe";
-import Works from "./pages/Works";
+import SelectedProjects from "./pages/SelectedProjects";
 
 // importing style
 import "./App.css";
@@ -15,7 +15,7 @@ const App = () => {
       <Nav />
       <Home />
       <AboutMe />
-      <Works />
+      <SelectedProjects />
     </div>
   );
 };

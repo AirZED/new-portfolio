@@ -16,6 +16,9 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 // Importing style
 import style from "./../styles/Nav.module.css";
 
+// importing from react-icons
+import { CiLight, CiDark } from "react-icons/ci";
+
 const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
 
@@ -30,8 +33,11 @@ const Nav = () => {
         <h1 className={style.name}>
           MFONISO <span>UKPABIO</span>
         </h1>
-        <div>
-          <Button content="Contact Me" />
+        <div className={style["nav-icons"]}>
+          <span>
+            <CiLight className={style.icon} />
+            Light
+          </span>
           <CiCircleMore className={style.icon} onClick={openNavHandler} />
         </div>
       </nav>
@@ -45,7 +51,7 @@ const Nav = () => {
   const EachLink = ({ text }: LinkProps): JSX.Element => {
     return (
       <li>
-        <div>
+        <div >
           <p>{text}</p>
           <MdOutlineArrowOutward className={style["link-icon"]} />
         </div>
