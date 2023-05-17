@@ -7,8 +7,11 @@ import useAnimate from "../hooks/useAnimate";
 // importing style
 import style from "./../styles/Home.module.css";
 
+// importing from react icons
+import { MdOutlineArrowOutward } from "react-icons/md";
+
 // importing supporting component
-import Button from "../components/Button";
+// import Button from "../components/Button";
 
 interface Props {
   word: string;
@@ -21,6 +24,7 @@ const MenuItem = (props: Props): JSX.Element => {
     <HashLink to={props.to} id="menu-item">
       <div className={style.dot}></div>
       <h1>{props.word}</h1>
+      <MdOutlineArrowOutward className={style["more-icon"]} />
     </HashLink>
   );
 };

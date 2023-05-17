@@ -7,7 +7,6 @@ import Topic from "../components/Topic";
 
 // importing data
 import data from "../assets/projects_data.json";
-console.log(data);
 
 interface ProjectType {
   topic: string;
@@ -17,9 +16,12 @@ interface ProjectType {
 
 const SelectedProjects = (): JSX.Element => {
   return (
-    <div className={style.work} id="projects">
-      <Topic content={"Some Selected Projects"} />
-      <Project />
+    <div className={style.projects} id="projects">
+      <div className={style["projects-header"]}>
+        <Topic content={"Some Selected Projects"} />
+        <p>A handful of my favorites</p>
+      </div>
+      <Project /> <Project /> <Project /> <Project /> <Project />
     </div>
   );
 };

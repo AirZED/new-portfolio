@@ -7,22 +7,24 @@ interface ProjectProps {
   topic?: string;
   image?: string;
   imageAlt?: string;
+  doneAt?: string;
 }
 
-const Project = ({ topic, image, imageAlt }: ProjectProps): JSX.Element => {
+const Project = ({
+  topic,
+  image,
+  imageAlt,
+  doneAt,
+}: ProjectProps): JSX.Element => {
   return (
     <div className={style.project}>
-      <div className={style.image}>
-        <img src={meals} alt="meals app" />
-      </div>
+      <img src={meals} className={style.img} alt="meals app" />
 
-      <div className={style.text}>
-        <p>Conversion from word to pdf</p>
-        <text>55</text>
+      <div>
+        <h1 className={style["project-name"]}>Conversion from word to pdf</h1>
+        <p className={style["project-stack"]}>Next Js, Material Icon</p>
       </div>
-
-      {/* <p>{topic}</p>
-      <img src={image} alt={imageAlt} /> */}
+      <p className={style["project-date"]}>/{21}</p>
     </div>
   );
 };

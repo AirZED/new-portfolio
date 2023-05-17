@@ -1,5 +1,15 @@
-.work {
-    padding: 0rem 4rem 4rem 4rem;
-    background-color: var(--light-bg);
+.projects {
+    padding: 0rem 4rem 4rem 4rem; 
     height: 100vh;
+}
+
+.projects .projects-header{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    
+}
+
+.projects .projects-header p{
+    font-size: 1.5rem;
 }
