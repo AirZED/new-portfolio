@@ -33,7 +33,7 @@ const Home = () => {
     <div className={style.home}>
       <div className={style.topic}>
         <h1>{currentText}</h1>
-        <p>BACKEND AND FRONTEND WEB DEVELOPER</p>
+        <p>Backend and Frontend Web Developer</p>
       </div>
 
       <div className={style.menu}>
