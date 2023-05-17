@@ -1,7 +1,55 @@
+@font-face {
+  font-family: "PP Mori";
+  font-weight: 100;
+  src: url('./assets/fonts/ppmori-extralight-webfont.woff2') format('woff2'),
+    url('./assets/fonts/ppmori-extralight-webfont.woff') format('woff')
+}
+
+@font-face {
+  font-family: "PP Mori";
+  font-weight: 100;
+  font-style: italic;
+  src: url('./assets/fonts/ppmori-extralightitalic-webfont.woff2') format('woff2'),
+    url('./assets/fonts/ppmori-extralightitalic-webfont.woff') format('woff')
+}
+
+@font-face {
+  font-family: "PP Mori";
+  font-weight: 300;
+  src: url('./assets/fonts/ppmori-regular-webfont.woff2') format('woff2'),
+    url('./assets/fonts/ppmori-regular-webfont.woff') format('woff')
+}
+
+@font-face {
+  font-family: "PP Mori";
+  font-weight: 300;
+  font-style: italic;
+  src: url('./assets/fonts/ppmori-regularitalicr-webfont.woff2') format('woff2'),
+    url('./assets/fonts/ppmori-regularitalic-webfont.woff') format('woff')
+}
+
+@font-face {
+  font-family: "PP Mori";
+  font-weight: 900;
+  src: url('./assets/fonts/ppmori-semibold-webfont.woff2') format('woff2'),
+    url('./assets/fonts/ppmori-semibold-webfont.woff') format('woff')
+}
+
+@font-face {
+  font-family: "PP Mori";
+  font-weight: 900;
+  font-style: italic;
+  src: url('./assets/fonts/ppmori-semibolditalic-webfont.woff2') format('woff2'),
+    url('./assets/fonts/ppmori-semibolditalic-webfont.woff') format('woff')
+}
+
+
+
+
 :root {
 
 
-  font-family: 'Manrope', sans-serif;
+  font-family: 'PP Mori', sans-serif;
   line-height: 1.5;
   --border-radius: 15px;
   --dark-bg: #3d3d3d;
