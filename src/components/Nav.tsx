@@ -1,11 +1,10 @@
 // importing from react
-import { Fragment, useState } from "react";
+import { Fragment, useState, useContext, ReactNode } from "react";
 
-// importing from react router dom
-import { Link } from "react-router-dom";
+// importing store
+import portfolioContext from "../store/portfolioStore";
 
 // importing components
-import Button from "./Button";
 import Portal from "./Backdrop";
 
 // importing from react-icons
@@ -20,11 +19,35 @@ import style from "./../styles/Nav.module.css";
 import { CiLight, CiDark } from "react-icons/ci";
 
 const Nav = () => {
+  const Contx = useContext(portfolioContext);
   const [openNav, setOpenNav] = useState(false);
 
+  const darkModeHandler = () => {
+    const root = document.querySelector("html");
+    root?.classList.toggle("dark");
+    Contx.darkModeHandler();
+  };
   const openNavHandler = () => {
     setOpenNav((prev) => !prev);
   };
+
+  type DarkModeProps = {
+    childNode: ReactNode;
+    type: string;
+  };
+
+  const DarkModeCompoenent = ({
+    childNode,
+    type,
+  }: DarkModeProps): JSX.Element => {
+    return (
+      <span onClick={darkModeHandler} className={style["mode-icons"]}>
+        {childNode}
+        {type}
+      </span>
+    );
+  };
+
   const navClassName = `${style.nav} ${style.close}`;
 
   const CloseNav = () => {
@@ -34,13 +57,13 @@ const Nav = () => {
           MFONISO <span>UKPABIO</span>
         </h1>
         <div className={style["nav-icons"]}>
-          <span>
-            <CiLight className={style.icon} />
-            Light
-          </span>
-          {<span>
-            <CiDark /> Dark
-          </span>}
+          {!Contx.darkMode && (
+            <DarkModeCompoenent type="Dark" childNode={<CiDark />} />
+          )}
+          {Contx.darkMode && (
+            <DarkModeCompoenent type="Light" childNode={<CiLight />} />
+          )}
+
           <CiCircleMore className={style.icon} onClick={openNavHandler} />
         </div>
       </nav>

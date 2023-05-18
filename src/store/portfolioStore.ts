@@ -1,7 +1,5 @@
 import { createContext } from "react";
 
-type MyContextValue = {};
-
-const portfolioContext = createContext<MyContextValue | undefined>(undefined);
+const portfolioContext = createContext<any>(null);
 
 export default portfolioContext;

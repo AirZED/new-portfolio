@@ -66,6 +66,14 @@
     font-size: 2rem;
 }
 
+.mode-icons {
+    cursor: pointer;
+}
+
+.mode-icons>* {
+    font-size: 1.6rem;
+}
+
 
 
 .header {

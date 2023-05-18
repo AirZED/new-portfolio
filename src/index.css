@@ -47,8 +47,6 @@
 
 
 :root {
-
-
   font-family: 'PP Mori', sans-serif;
   font-weight: 300;
   line-height: 1.5;
@@ -59,6 +57,11 @@
   --backdrop: #000000de;
   --nav-bg: #f8f8f8;
   text-rendering: optimizeLegibility;
+}
+
+:root.dark {
+  --dark-bg: #e5e5e5;
+  --light-bg: #3d3d3d;
 }
 
 * {

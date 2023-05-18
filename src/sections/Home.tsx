@@ -11,7 +11,6 @@ import style from "./../styles/Home.module.css";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
 // importing supporting component
-// import Button from "../components/Button";
 
 interface Props {
   word: string;

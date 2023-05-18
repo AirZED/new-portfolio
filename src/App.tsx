@@ -1,4 +1,5 @@
-import { useState } from "react";
+// importing Context
+import ContextProvider from "./store/contextProvider";
 
 // Importing components
 import Home from "./sections/Home";
@@ -12,13 +13,13 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div className="App">
+    <ContextProvider className="App">
       <Nav />
       <Home />
       <AboutMe />
       <SelectedProjects />
       <ContactMe />
-    </div>
+    </ContextProvider>
   );
 };
 

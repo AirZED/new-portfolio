@@ -29,6 +29,7 @@ const SelectedProjects = (): JSX.Element => {
           image={el.image}
           doneAt={el.buildDate}
           stack={el.stack}
+          key={el.id}
         />
       ))}
 

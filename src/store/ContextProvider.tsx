@@ -1,45 +1,20 @@
-import React, { useReducer } from "react";
+import React, { ReactNode, useState } from "react";
 import portfolioContext from "./portfolioStore";
 
-enum actionKind {
-  LIGHTMODE = "LIGHTMODE",
-  DARKMODE = "DARKMODE",
-}
-
-type actionProps = {
-  payload: string;
-  action: actionKind;
-};
-
 type contextProps = {
-  children: React.ReactNode;
+  children: ReactNode[];
+  className: string;
 };
 
-type initialStateProps = {
-  darkMode: boolean;
-};
+const ContextProvider = ({ children, className }: contextProps) => {
+  const [darkMode, setDarkMode] = useState(false);
 
-const initialState = {
-  darkMode: false,
-};
-
-const reducerFn = (state: initialStateProps, action: actionProps) => {
-  if (action.action === actionKind.LIGHTMODE) {
-    return { ...state, darkMode: false };
-  }
-
-  if (action.action === actionKind.DARKMODE) {
-    return { ...state, darkMode: true };
-  }
-
-  return initialState;
-};
-
-const ContextProvider = ({ children }: contextProps) => {
-  const [reducerState, dispatchFn] = useReducer(reducerFn, initialState);
+  const darkModeHandler = () => {
+    setDarkMode((prev) => !prev);
+  };
 
   return (
-    <portfolioContext.Provider value={{ darkMode: false }}>
+    <portfolioContext.Provider value={{ darkMode, darkModeHandler }}>
       {children}
     </portfolioContext.Provider>
   );
