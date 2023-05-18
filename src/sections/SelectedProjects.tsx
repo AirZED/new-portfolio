@@ -24,6 +24,7 @@ const SelectedProjects = (): JSX.Element => {
 
       {projectData.map((el) => (
         <Project
+          url={el.url}
           topic={el.topic}
           image={el.image}
           doneAt={el.buildDate}

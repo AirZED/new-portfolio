@@ -1,0 +1,21 @@
+.contact {
+    padding: 5rem 4rem 6rem 4rem;
+    height: auto;
+}
+
+.contact p {
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.contact a {
+    margin-top: 2rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--dark-bg);
+    gap: .5rem;
+}

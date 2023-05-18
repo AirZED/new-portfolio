@@ -2,14 +2,17 @@
     position: relative;
     height: auto;
     width: 100%;
-
     border-bottom: .5px solid var(--lessdark-bg);
     padding-top: 2rem;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     cursor: pointer;
+    color: var(--dark-bg);
+}
 
+.project:active * {
+    color: var(--lessdark-bg);
 }
 
 .project .project-name {

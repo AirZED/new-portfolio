@@ -75,6 +75,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: var(--lessdark-bg)
+}
+
 
 
 h1,

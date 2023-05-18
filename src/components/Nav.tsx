@@ -38,6 +38,9 @@ const Nav = () => {
             <CiLight className={style.icon} />
             Light
           </span>
+          {<span>
+            <CiDark /> Dark
+          </span>}
           <CiCircleMore className={style.icon} onClick={openNavHandler} />
         </div>
       </nav>
@@ -51,7 +54,7 @@ const Nav = () => {
   const EachLink = ({ text }: LinkProps): JSX.Element => {
     return (
       <li>
-        <div >
+        <div>
           <p>{text}</p>
           <MdOutlineArrowOutward className={style["link-icon"]} />
         </div>

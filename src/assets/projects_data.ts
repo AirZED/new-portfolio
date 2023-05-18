@@ -10,6 +10,7 @@ const project_data = [
     stack: "React Js, Firebase and Redux",
     buildDate: "2022",
     image: quotes,
+    url: "https://quotespage-with-react-router-4zu6.vercel.app/quotes",
     description:
       "View Quotes is a web application hosted on Vercel that is built with ReactJS, React Router, Firebase, and Redux. The platform allows users to view a collection of quotes, leave comments on them, and share them on social media platforms. With a clean and intuitive user interface, users can easily navigate through the platform and interact with different features. Users can browse through a collection of quotes, sort them by author or category, and also search for specific quotes. Users can also leave comments on their favorite quotes and engage in discussions with other users. The platform also features a functionality that allows users to share their favorite quotes on social media platforms such as Twitter and Facebook. Overall, this web application represents a great alternative to other platforms that offer similar functionality. If you're looking for a user-friendly platform to view, comment, and share quotes, View Quotes hosted on Vercel and powered by Firebase, ReactJS, React Router, and Redux is definitely worth checking out.",
   },
@@ -19,6 +20,7 @@ const project_data = [
     stack: "React Js, Firebase and Redux",
     buildDate: "2022",
     image: meals,
+    url: "https://food-order-app-pied.vercel.app/",
     description:
       "NiceMeals is a web application hosted on Vercel that is built with ReactJS, Firebase, React Router, and Redux. The platform allows users to browse through a collection of meals, add them to their cart, and complete their orders online. With a clean and modern user interface, users can easily navigate through the platform and interact with different features. Users can browse through different categories of meals, view detailed descriptions and images of each meal, and add their favorite meals to their cart. The platform also features a functionality that allows users to complete their orders online, make payments, and track their orders in real-time. Overall, this web application represents a great alternative to other platforms that offer similar functionality. If you're looking for a user-friendly platform to browse and order meals online, NiceMeals hosted on Vercel and powered by Firebase, ReactJS, React Router, and Redux is definitely worth checking out.",
   },
@@ -28,6 +30,7 @@ const project_data = [
     stack: "React Js",
     buildDate: "2022",
     image: airbnb,
+    url: "https://hng3.vercel.app/Air%20BnB",
     description:
       "AirBNB Clone is a web application built with ReactJS, and React Router. The platform offers a simple and elegant landing page that allows users to search for properties by location, view detailed descriptions and images of each property, and book their desired accommodations. With a sleek and modern user interface, the landing page presents users with a variety of options to explore, making it easy to find and book the perfect accommodation. The platform also offers property owners the ability to create their own listings, manage bookings, and communicate with potential guests. Overall, this web application represents a great alternative to other platforms that offer similar functionality. If you're looking for a user-friendly platform to book accommodation options or create your own listings, AirBNB Clone hosted on Vercel and powered by Firebase and ReactJS is definitely worth checking out.",
   },
@@ -37,6 +40,7 @@ const project_data = [
     stack: "React Js, Firebase and Redux",
     buildDate: "2023",
     image: connectapp,
+    url: "https://start-hub-connect.web.app/",
     description:
       "Start Hub Connect is a web application built with Firebase, ReactJS, and React Router. The platform aims to connect startup founders and entrepreneurs with investors and mentors, providing a space for individuals to network, collaborate, and grow their businesses. With a sleek and modern user interface, users can easily create a profile, browse through a directory of other users, and connect with potential collaborators or investors. The platform also offers a variety of resources and tools to help users develop and grow their businesses, including access to mentorship, funding opportunities, and educational content. Overall, Start Hub Connect represents a great opportunity for individuals in the startup space to connect and collaborate with like-minded individuals. If you're looking to expand your network and grow your business, this platform is definitely worth checking out.",
   },
