@@ -1,26 +1,18 @@
 // importing from react
-import { Fragment, useState, useContext, ReactNode } from "react";
-
-// importing from react-hash-link
-import { HashLink } from "react-router-hash-link";
+import { Fragment, useState, useContext } from "react";
 
 // importing store
 import portfolioContext from "../store/portfolioStore";
-
 // importing components
 import Portal from "./Backdrop";
-
+// importing supporting component
+import { DarkModeComponent, EachLink } from "./NavUtils";
 // importing from react-icons
-import { CgMenuRight } from "react-icons/cg";
-import { CgClose } from "react-icons/cg";
-import { MdOutlineArrowOutward } from "react-icons/md";
+import { CgMenuRight, CgClose } from "react-icons/cg";
+import { MdDarkMode } from "react-icons/md";
 
 // Importing style
 import style from "./../styles/Nav.module.css";
-
-// importing from react-icons
-import { CiLight, CiDark } from "react-icons/ci";
-import { MdDarkMode } from "react-icons/md";
 
 const Nav = () => {
   const Contx = useContext(portfolioContext);
@@ -31,38 +23,9 @@ const Nav = () => {
     root?.classList.toggle("dark");
     Contx.darkModeHandler();
   };
+
   const openNavHandler = () => {
     setOpenNav((prev) => !prev);
-  };
-
-  type DarkModeProps = {
-    childNode: ReactNode;
-    type: string;
-  };
-
-  const DarkModeCompoenent = ({
-    childNode,
-    type,
-  }: DarkModeProps): JSX.Element => {
-    return (
-      <span onClick={darkModeHandler} className={style["mode-icons"]}>
-        {childNode}
-        {type}
-      </span>
-    );
-  };
-
-  interface LinkProps {
-    text: string;
-    to: string;
-  }
-  const EachLink = ({ text, to }: LinkProps): JSX.Element => {
-    return (
-      <HashLink to={to}>
-        <p>{text}</p>
-        <MdOutlineArrowOutward className={style["link-icon"]} />
-      </HashLink>
-    );
   };
 
   const navClassName = `${style.nav} ${style.close}`;
@@ -87,13 +50,18 @@ const Nav = () => {
 
           <div className={style["nav-icons"]}>
             {!Contx.darkMode && (
-              <DarkModeCompoenent
+              <DarkModeComponent
                 type="Dark"
                 childNode={<MdDarkMode className={style["dark-icon"]} />}
+                darkModeHandler={darkModeHandler}
               />
             )}
             {Contx.darkMode && (
-              <DarkModeCompoenent type="Light" childNode={<CiLight />} />
+              <DarkModeComponent
+                type="Light"
+                childNode={<CiLight />}
+                darkModeHandler={darkModeHandler}
+              />
             )}
 
             <CgMenuRight

@@ -25,7 +25,8 @@
 
 @media (max-width:700px) {
     .backtotop {
-        right: 2rem;
+        right: 1rem;
+        bottom: 1rem;
 
     }
 
