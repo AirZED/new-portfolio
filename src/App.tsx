@@ -19,12 +19,7 @@ const App = () => {
   const projectRef = useRef<HTMLDivElement | null>(null);
   const Contx = useContext(portfolioContext);
 
-  const scrollToView = (element: any) => {
-    element.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
+  
   return (
     <ContextProvider>
       <Nav />
