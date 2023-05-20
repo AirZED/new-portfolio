@@ -1,0 +1,32 @@
+.backtotop {
+    position: fixed;
+    bottom: 2rem;
+    right: 4rem;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark-bg);
+    cursor: pointer;
+}
+
+.backtotop:hover {
+    background: var(--lessdark-bg);
+}
+
+.backtotop>* {
+    font-size: 2rem;
+    color: var(--light-bg);
+}
+
+@media (max-width:700px) {
+    .backtotop {
+        right: 2rem;
+
+    }
+
+    .backtotop>* {
+        font-size: 1.5rem;
+    }
+}

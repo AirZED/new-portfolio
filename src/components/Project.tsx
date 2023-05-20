@@ -17,7 +17,7 @@ const Project = ({
   url,
 }: ProjectProps): JSX.Element => {
   return (
-    <a className={style.project} href={url}>
+    <a className={style.project} href={url} target="_blank">
       <img src={image} className={style.img} alt={topic} />
       <div>
         <h1 className={style["project-name"]}>{topic}</h1>

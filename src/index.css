@@ -51,17 +51,22 @@
   font-weight: 300;
   line-height: 1.5;
   --border-radius: 15px;
-  --dark-bg: #3d3d3d;
+  --dark-bg: #000000;
   --light-bg: #e5e5e5;
-  --lessdark-bg: #646464;
+  --lessdark-bg: #3d3d3d;
   --backdrop: #000000de;
+  --accent-color: #0000ff;
   --nav-bg: #f8f8f8;
   text-rendering: optimizeLegibility;
+  background-color: var(--light-bg);
+  color: var(--dark-bg);
 }
 
 :root.dark {
   --dark-bg: #e5e5e5;
-  --light-bg: #3d3d3d;
+  --light-bg: #111414;
+  --lessdark-bg: #b8b7b7;
+  --nav-bg: #525151;
 }
 
 * {

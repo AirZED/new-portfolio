@@ -1,6 +1,9 @@
 // importing from react
 import { Fragment, useState, useContext, ReactNode } from "react";
 
+// importing from react-hash-link
+import { HashLink } from "react-router-hash-link";
+
 // importing store
 import portfolioContext from "../store/portfolioStore";
 
@@ -8,7 +11,7 @@ import portfolioContext from "../store/portfolioStore";
 import Portal from "./Backdrop";
 
 // importing from react-icons
-import { CiCircleMore } from "react-icons/ci";
+import { CgMenuRight } from "react-icons/cg";
 import { CgClose } from "react-icons/cg";
 import { MdOutlineArrowOutward } from "react-icons/md";
 
@@ -17,6 +20,7 @@ import style from "./../styles/Nav.module.css";
 
 // importing from react-icons
 import { CiLight, CiDark } from "react-icons/ci";
+import { MdDarkMode } from "react-icons/md";
 
 const Nav = () => {
   const Contx = useContext(portfolioContext);
@@ -48,42 +52,61 @@ const Nav = () => {
     );
   };
 
+  interface LinkProps {
+    text: string;
+    to: string;
+  }
+  const EachLink = ({ text, to }: LinkProps): JSX.Element => {
+    return (
+      <HashLink to={to}>
+        <p>{text}</p>
+        <MdOutlineArrowOutward className={style["link-icon"]} />
+      </HashLink>
+    );
+  };
+
   const navClassName = `${style.nav} ${style.close}`;
 
   const CloseNav = () => {
+    const navClose = Contx.scrollPosition > window.innerHeight / 4;
+
     return (
       <nav className={navClassName}>
         <h1 className={style.name}>
           MFONISO <span>UKPABIO</span>
         </h1>
-        <div className={style["nav-icons"]}>
-          {!Contx.darkMode && (
-            <DarkModeCompoenent type="Dark" childNode={<CiDark />} />
-          )}
-          {Contx.darkMode && (
-            <DarkModeCompoenent type="Light" childNode={<CiLight />} />
+
+        <div className={style["close-menu"]}>
+          {navClose && (
+            <div className={style["close-nav"]}>
+              <EachLink text="About" to="/#info" />
+              <EachLink text="Projects" to="/#projects" />
+              <EachLink text="Contact" to="/#contacts" />
+            </div>
           )}
 
-          <CiCircleMore className={style.icon} onClick={openNavHandler} />
+          <div className={style["nav-icons"]}>
+            {!Contx.darkMode && (
+              <DarkModeCompoenent
+                type="Dark"
+                childNode={<MdDarkMode className={style["dark-icon"]} />}
+              />
+            )}
+            {Contx.darkMode && (
+              <DarkModeCompoenent type="Light" childNode={<CiLight />} />
+            )}
+
+            <CgMenuRight
+              className={style["more-icon"]}
+              onClick={openNavHandler}
+            />
+          </div>
         </div>
       </nav>
     );
   };
 
   // Links
-  interface LinkProps {
-    text: string;
-  }
-  const EachLink = ({ text }: LinkProps): JSX.Element => {
-    return (
-      <li>
-        <div>
-          <p>{text}</p>
-          <MdOutlineArrowOutward className={style["link-icon"]} />
-        </div>
-      </li>
-    );
-  };
 
   const OpenNav = () => {
     return (
@@ -92,13 +115,14 @@ const Nav = () => {
           <div className={style.open}>
             <div className={style.header}>
               <h1 className={style.name}>MFONISO UKPABIO</h1>
-              <CgClose className={style.icon} onClick={openNavHandler} />
+              <CgClose
+                className={style["close-icon"]}
+                onClick={openNavHandler}
+              />
             </div>
-            <EachLink text="HOME" />
-            <EachLink text="SERVICES" />
-            <EachLink text="WORKS" />
-            <EachLink text="ABOUT" />
-            <EachLink text="CONTACT" />
+            <EachLink text="About" to="/#info" />
+            <EachLink text="Projects" to="/#projects" />
+            <EachLink text="Contact" to="/#contacts" />
           </div>
         </nav>
         <div className={style["more-info"]}>food</div>

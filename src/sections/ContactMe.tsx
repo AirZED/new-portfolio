@@ -9,7 +9,7 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 
 const ContactMe = () => {
   return (
-    <div className={style.contact}>
+    <div className={style.contact} id="contacts">
       <Topic content="Contact Me" />
       <p>
         Ready to bring your vision to life? Let's collaborate and create an
