@@ -3,17 +3,14 @@ import { Fragment, useState, useContext } from "react";
 
 // importing store
 import portfolioContext from "../store/portfolioStore";
-
 // importing components
 import Portal from "./Backdrop";
 // importing supporting component
-import { DarkModeComponent, EachLink } from "./NavUtils";
-
+import { DarkModeComponent, EachLink, LogoSection } from "./NavUtils";
 // importing from react-icons
 import { CgMenuRight, CgClose } from "react-icons/cg";
 import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
-
 // Importing style
 import style from "./../styles/Nav.module.css";
 
@@ -33,7 +30,7 @@ const Nav = () => {
 
   const navClassName = `${style.nav} ${style.close}`;
 
-  const CloseNav = () => {
+  const BigScreenNav = () => {
     const navClose = Contx.scrollPosition > window.innerHeight / 4;
 
     return (
@@ -77,25 +74,16 @@ const Nav = () => {
     );
   };
 
-  // Links
-
-  const OpenNav = () => {
+  
+  const SmallScreenNav = () => {
     return (
       <nav className={style.nav}>
-        <nav className={style.more}>
-          <div className={style.open}>
-            <div className={style.header}>
-              <h1 className={style.name}>MFONISO UKPABIO</h1>
-              <CgClose
-                className={style["close-icon"]}
-                onClick={openNavHandler}
-              />
-            </div>
-            <EachLink text="About" to="/#info" />
-            <EachLink text="Projects" to="/#projects" />
-            <EachLink text="Contact" to="/#contacts" />
-          </div>
-        </nav>
+        <div className={style.open}>
+          <LogoSection openNavHandler={openNavHandler} />
+          <EachLink text="About" to="/#info" />
+          <EachLink text="Projects" to="/#projects" />
+          <EachLink text="Contact" to="/#contacts" />
+        </div>
         <div className={style["more-info"]}>food</div>
       </nav>
     );
@@ -103,9 +91,9 @@ const Nav = () => {
 
   return (
     <Fragment>
-      {!openNav && <CloseNav />}
+      {!openNav && <BigScreenNav />}
       {openNav && (
-        <Portal closeBackdrop={openNavHandler} element={<OpenNav />} />
+        <Portal closeBackdrop={openNavHandler} element={<SmallScreenNav />} />
       )}
     </Fragment>
   );
