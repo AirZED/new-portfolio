@@ -1,3 +1,5 @@
+// importing from react
+import { forwardRef } from "react";
 // importing style
 import style from "./../styles/SelectedProjects.module.css";
 
@@ -8,15 +10,11 @@ import Topic from "../components/Topic";
 // importing data
 import projectData from "../assets/projects_data";
 
-interface ProjectType {
-  topic: string;
-  description: string;
-  id: number;
-}
+type SelectedProjectsProps = {};
 
-const SelectedProjects = (): JSX.Element => {
+const SelectedProjects = forwardRef(({}, ref) => {
   return (
-    <div className={style.projects} id="projects">
+    <div className={style.projects} id="projects" ref={ref}>
       <div className={style["projects-header"]}>
         <Topic content={"Some Selected Projects"} />
         <p>Build year</p>
@@ -42,6 +40,6 @@ const SelectedProjects = (): JSX.Element => {
       </div>
     </div>
   );
-};
+});
 
 export default SelectedProjects;

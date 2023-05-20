@@ -1,14 +1,18 @@
 // importing from react
-import { Fragment, useState, useContext } from "react";
+import { Fragment, useState, useContext, useEffect } from "react";
 
 // importing store
 import portfolioContext from "../store/portfolioStore";
 // importing components
-import Portal from "./Backdrop";
+import Backdrop from "../components/Backdrop";
 // importing supporting component
-import { DarkModeComponent, EachLink, LogoSection } from "./NavUtils";
+import {
+  DarkModeComponent,
+  EachLink,
+  LogoSection,
+} from "../components/NavUtils";
 // importing from react-icons
-import { CgMenuRight, CgClose } from "react-icons/cg";
+import { CgMenuRight } from "react-icons/cg";
 import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 // Importing style
@@ -27,6 +31,12 @@ const Nav = () => {
   const openNavHandler = () => {
     setOpenNav((prev) => !prev);
   };
+
+  useEffect(() => {
+    if (Contx.pageWidth > 699) {
+      setOpenNav(false);
+    }
+  }, [Contx.pageWidth]);
 
   const navClassName = `${style.nav} ${style.close}`;
 
@@ -74,7 +84,6 @@ const Nav = () => {
     );
   };
 
-  
   const SmallScreenNav = () => {
     return (
       <nav className={style.nav}>
@@ -93,7 +102,10 @@ const Nav = () => {
     <Fragment>
       {!openNav && <BigScreenNav />}
       {openNav && (
-        <Portal closeBackdrop={openNavHandler} element={<SmallScreenNav />} />
+        <div>
+          <Backdrop closeBackdrop={openNavHandler} />
+          <SmallScreenNav />
+        </div>
       )}
     </Fragment>
   );

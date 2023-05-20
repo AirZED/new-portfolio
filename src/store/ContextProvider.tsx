@@ -8,6 +8,7 @@ type contextProps = {
 const ContextProvider = ({ children }: contextProps) => {
   const [darkMode, setDarkMode] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [width, setWidth] = useState(0);
 
   const darkModeHandler = () => {
     setDarkMode((prev) => !prev);
@@ -15,20 +16,26 @@ const ContextProvider = ({ children }: contextProps) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentPosition = window.pageYOffset;
+      const currentPosition = window.scrollY;
       setScrollPosition(currentPosition);
     };
 
+    const handleWidth = () => {
+      setWidth(window.innerWidth);
+    };
+
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleWidth);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleWidth);
     };
   }, []);
 
   return (
     <portfolioContext.Provider
-      value={{ darkMode, darkModeHandler, scrollPosition }}
+      value={{ darkMode, darkModeHandler, scrollPosition, pageWidth: width }}
     >
       <div className="App">{children}</div>
     </portfolioContext.Provider>

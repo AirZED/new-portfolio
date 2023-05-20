@@ -60,9 +60,6 @@
     font-size: 1.8rem;
 }
 
-
-/* DONE */
-
 .nav a {
     text-decoration: none;
     font-size: 1.2rem;
@@ -185,7 +182,5 @@
         padding: 0.3rem 2rem;
         width: 100%;
     }
-
-
 
 }
