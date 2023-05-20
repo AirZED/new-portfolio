@@ -3,13 +3,16 @@ import { Fragment, useState, useContext } from "react";
 
 // importing store
 import portfolioContext from "../store/portfolioStore";
+
 // importing components
 import Portal from "./Backdrop";
 // importing supporting component
 import { DarkModeComponent, EachLink } from "./NavUtils";
+
 // importing from react-icons
 import { CgMenuRight, CgClose } from "react-icons/cg";
 import { MdDarkMode } from "react-icons/md";
+import { CiLight } from "react-icons/ci";
 
 // Importing style
 import style from "./../styles/Nav.module.css";
