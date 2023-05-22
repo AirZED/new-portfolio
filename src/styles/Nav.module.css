@@ -123,6 +123,7 @@
 
     .nav {
         height: auto;
+        border-bottom: .2rem solid var(--dark-bg);
     }
 
     .nav .open>* {
