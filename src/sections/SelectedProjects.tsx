@@ -13,7 +13,7 @@ const SelectedProjects = forwardRef((props, ref: any) => {
     <div className={style.projects} id="projects" ref={ref}>
       <div className={style["projects-header"]}>
         <Topic content={"Some Selected Projects"} />
-        <p>Build year</p>
+        <span>Build year</span>
       </div>
 
       {projectData.map((el) => (

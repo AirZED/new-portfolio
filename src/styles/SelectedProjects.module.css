@@ -10,7 +10,7 @@
 
 }
 
-.projects .projects-header p {
+.projects .projects-header span {
     font-size: 1.5rem;
 }
 
@@ -31,5 +31,20 @@
 @media (max-width:700px) {
     .projects {
         padding: 5rem 1rem 0rem 1rem;
+    }
+
+    .projects .projects-header span {
+        font-size: 1rem;
+        text-align: center;
+
+    }
+
+}
+
+@media (max-width:500px) {
+    .projects .projects-header span {
+        font-size: 1rem;
+        text-align: center;
+
     }
 }
