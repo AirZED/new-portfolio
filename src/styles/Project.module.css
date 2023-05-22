@@ -54,22 +54,24 @@
 @media (max-width:1200px) {}
 
 @media (max-width:800px) {
-    .projects {
+    .project {
         padding: 5rem 1rem 0rem 1rem;
         position: relative;
         pointer-events: none;
+        border: 2px solid red;
+        padding: 0;
     }
+
 
     .img {
         position: static;
         width: 100%;
         opacity: 1;
         visibility: visible;
-        pointer-events: none;
         transform: none;
     }
 
-    .project div {
+    .project>div {
         position: absolute;
         height: auto;
         background: var(--dark-bg);
@@ -77,6 +79,14 @@
         right: 0;
         left: 0;
         padding: .5rem 0rem;
+        z-index: 2;
+
+    }
+
+    .project p {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
     }
 
     .project div>* {
