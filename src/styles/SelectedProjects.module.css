@@ -39,6 +39,14 @@
 
     }
 
+    .projects .see-more-projects h2 {
+        font-size: 1.5rem;
+    }
+
+    .projects .see-more-projects p {
+        font-size: 1.3rem;
+    }
+
 }
 
 @media (max-width:500px) {
@@ -46,5 +54,13 @@
         font-size: 1rem;
         text-align: center;
 
+    }
+
+    .projects .see-more-projects h2 {
+        font-size: 1.1rem;
+    }
+
+    .projects .see-more-projects p {
+        font-size: 1rem;
     }
 }
