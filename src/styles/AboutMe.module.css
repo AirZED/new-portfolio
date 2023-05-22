@@ -45,6 +45,10 @@
 }
 
 @media (max-width:1200px) {
+    .about {
+        padding: 4rem 4rem 0rem 4rem;
+       
+    }
     .textArea {
         flex-direction: column;
     }
