@@ -16,7 +16,7 @@ const AboutMe = forwardRef((props, ref: any) => {
       </div>
       <div className={style.textArea}>
         <div className={style.text}>
-          <div>
+          <p>
             <span>Mfoniso Ukpabio</span> is a highly skilled and detail-oriented
             MERN stack developer, specializing in TypeScript, Next.js, React,
             and Node.js. With a strong background in problem-solving, Data
@@ -26,7 +26,7 @@ const AboutMe = forwardRef((props, ref: any) => {
             solutions is evident through their successful completion of multiple
             internships and ongoing studies in Computer Engineering at the
             University of Uyo.
-          </div>
+          </p>
         </div>
         <img src={displayImage} alt="mfoniso standing and smiling" />
       </div>

@@ -51,14 +51,10 @@
 }
 
 
-.project .text {
-    /* width: 65%;
-    background: rgb(40, 40, 40);
-    background: -moz-linear-gradient(90deg, rgb(26, 25, 25) 14%, rgba(36, 35, 35, 0) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(40, 40, 40, 1) 14%, rgba(74, 71, 71, 0) 100%);
-    background: linear-gradient(90deg, rgb(26, 25, 25) 14%, rgba(36, 35, 35, 0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#282828", endColorstr="#4a4747", GradientType=1);
-    position: absolute;
-    bottom: 0;
-    height: 100%; */
+@media (max-width:1200px) {}
+
+@media (max-width:700px) {
+    .projects {
+        padding: 5rem 1rem 0rem 1rem;
+    }
 }
