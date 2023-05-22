@@ -1,5 +1,6 @@
 // importing from react
 import { Fragment, useState, useContext, useEffect } from "react";
+import { ComponentRefs } from "../App";
 
 // importing store
 import portfolioContext from "../store/portfolioStore";
@@ -18,7 +19,11 @@ import { CiLight } from "react-icons/ci";
 // Importing style
 import style from "./../styles/Nav.module.css";
 
-const Nav = () => {
+interface NavBarProps {
+  componentsRef: ComponentRefs;
+}
+
+const Nav = ({ componentsRef }: NavBarProps) => {
   const Contx = useContext(portfolioContext);
   const [openNav, setOpenNav] = useState(false);
 
@@ -40,6 +45,26 @@ const Nav = () => {
 
   const navClassName = `${style.nav} ${style.close}`;
 
+  const NavEntities = (
+    <Fragment>
+      <EachLink
+        text="About"
+        to="/#info"
+        componentRef={componentsRef.aboutRef}
+      />
+      <EachLink
+        text="Projects"
+        to="/#projects"
+        componentRef={componentsRef.projectRef}
+      />
+      <EachLink
+        text="Contact"
+        to="/#contacts"
+        componentRef={componentsRef.contactRef}
+      />
+    </Fragment>
+  );
+
   const BigScreenNav = () => {
     const navClose = Contx.scrollPosition > window.innerHeight / 4;
 
@@ -50,13 +75,7 @@ const Nav = () => {
         </h1>
 
         <div className={style["close-menu"]}>
-          {navClose && (
-            <div className={style["close-nav"]}>
-              <EachLink text="About" to="/#info" />
-              <EachLink text="Projects" to="/#projects" />
-              <EachLink text="Contact" to="/#contacts" />
-            </div>
-          )}
+          {navClose && <div className={style["close-nav"]}>{NavEntities}</div>}
 
           <div className={style["nav-icons"]}>
             {!Contx.darkMode && (
@@ -89,9 +108,7 @@ const Nav = () => {
       <nav className={style.nav}>
         <div className={style.open}>
           <LogoSection openNavHandler={openNavHandler} />
-          <EachLink text="About" to="/#info" />
-          <EachLink text="Projects" to="/#projects" />
-          <EachLink text="Contact" to="/#contacts" />
+          {NavEntities}
         </div>
         <div className={style["more-info"]}>food</div>
       </nav>

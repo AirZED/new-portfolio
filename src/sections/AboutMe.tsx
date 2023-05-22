@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 // importing style
 import style from "./../styles/AboutMe.module.css";
 
@@ -7,9 +8,9 @@ import displayImage from "./../assets/images/me.jpg";
 // importing supporting component
 import Topic from "../components/Topic";
 
-const AboutMe = () => {
+const AboutMe = forwardRef((props, ref: any) => {
   return (
-    <div className={style.about} id="info">
+    <div className={style.about} id="info" ref={ref}>
       <div className={style.topic}>
         <Topic content="About Mfoniso" />
       </div>
@@ -27,10 +28,10 @@ const AboutMe = () => {
             University of Uyo.
           </div>
         </div>
-          <img src={displayImage} alt="mfoniso standing and smiling" />
+        <img src={displayImage} alt="mfoniso standing and smiling" />
       </div>
     </div>
   );
-};
+});
 
 export default AboutMe;

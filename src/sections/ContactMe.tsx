@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 // importing supporting component
 import Topic from "../components/Topic";
 
@@ -7,9 +8,9 @@ import style from "./../styles/ContactMe.module.css";
 // importing from react icons
 import { MdOutlineArrowOutward } from "react-icons/md";
 
-const ContactMe = () => {
+const ContactMe = forwardRef((props, ref: any) => {
   return (
-    <div className={style.contact} id="contacts">
+    <div className={style.contact} id="contacts" ref={ref}>
       <Topic content="Contact Me" />
       <p>
         Ready to bring your vision to life? Let's collaborate and create an
@@ -20,6 +21,6 @@ const ContactMe = () => {
       </a>
     </div>
   );
-};
+});
 
 export default ContactMe;

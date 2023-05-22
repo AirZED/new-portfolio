@@ -1,5 +1,6 @@
 //importing from react-router-dom
-import { HashLink } from "react-router-hash-link";
+import { scrollToView } from "../utils/utils";
+import { ComponentRefs } from "../App";
 
 // importing custom hook
 import useAnimate from "../hooks/useAnimate";
@@ -10,27 +11,29 @@ import style from "./../styles/Home.module.css";
 // importing from react icons
 import { MdOutlineArrowOutward } from "react-icons/md";
 
-// importing supporting component
-
-interface Props {
-  word: string;
-  to: string;
-  className?: string;
+interface HomeProps {
+  componentsRef: ComponentRefs;
 }
 
-const MenuItem = (props: Props): JSX.Element => {
-  return (
-    <HashLink to={props.to} id="menu-item">
-      <div className={style.dot}></div>
-      <h1>{props.word}</h1>
-      <MdOutlineArrowOutward className={style["more-icon"]} />
-    </HashLink>
-  );
-};
-
-const Home = () => {
+const Home = ({ componentsRef }: HomeProps) => {
   // calling currentText hook
   const currentText = useAnimate("Mfoniso Ukpabio");
+
+  interface MenuItemProps {
+    word: string;
+    className?: string;
+    componentRef: any;
+  }
+
+  const MenuItem = (props: MenuItemProps): JSX.Element => {
+    return (
+      <li id="menu-item" onClick={scrollToView.bind(null, props.componentRef)}>
+        <div className={style.dot}></div>
+        <h1>{props.word}</h1>
+        <MdOutlineArrowOutward className={style["more-icon"]} />
+      </li>
+    );
+  };
 
   return (
     <div className={style.home}>
@@ -40,23 +43,13 @@ const Home = () => {
       </div>
 
       <div className={style.menu}>
-        <MenuItem word="About Mfoniso" to="/#info" />
-        <MenuItem word="Some Selected Projects" to="/#projects" />
-        <MenuItem word="Contacts" to="/#contacts" />
+        <MenuItem word="About Mfoniso" componentRef={componentsRef.aboutRef} />
+        <MenuItem
+          word="Some Selected Projects"
+          componentRef={componentsRef.projectRef}
+        />
+        <MenuItem word="Contacts" componentRef={componentsRef.contactRef} />
       </div>
-
-      {/* <div className={style.summary}>{
-        <p className={style.skill}>
-          My skills include developing and maintaining databases, building
-          RESTful APIs, ensuring security and data integrity, and
-          troubleshooting issues and building dynamic user interfaces for web
-          applications.
-        </p>
-        <div>
-          <p className={style.stack}>NODE, EXPRESS JS, REACT JS AND MONGO DB</p>
-          <Button content="Contact Me" />
-        </div>}
-      </div> */}
     </div>
   );
 };

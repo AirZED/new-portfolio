@@ -3,6 +3,7 @@ import { HashLink } from "react-router-hash-link";
 import style from "./../styles/Nav.module.css";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { CgClose } from "react-icons/cg";
+import { scrollToView } from "./../utils/utils";
 
 type DarkModeProps = {
   childNode: ReactNode;
@@ -25,14 +26,16 @@ export const DarkModeComponent = ({
 
 interface LinkProps {
   text: string;
-  to: string;
+  to?: string;
+  componentRef: any;
 }
-export const EachLink = ({ text, to }: LinkProps): JSX.Element => {
+
+export const EachLink = ({ text, componentRef }: LinkProps): JSX.Element => {
   return (
-    <HashLink to={to}>
+    <li onClick={scrollToView.bind(null, componentRef)}>
       <p>{text}</p>
       <MdOutlineArrowOutward className={style["link-icon"]} />
-    </HashLink>
+    </li>
   );
 };
 

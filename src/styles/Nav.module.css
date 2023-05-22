@@ -60,7 +60,7 @@
     font-size: 1.8rem;
 }
 
-.nav a {
+.nav li {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 900;
@@ -71,19 +71,19 @@
     color: var(--dark-bg);
 }
 
-.nav a>* {
+.nav li>* {
     transition: ease-in 1s;
     margin: 0;
     font-weight: 300;
 }
 
-.nav a:hover p {
+.nav li:hover p {
     animation-name: move-up-and-back;
     animation-duration: .5s;
     animation-fill-mode: forwards;
 }
 
-.nav a>div:hover .link-icon {
+.nav li>div:hover .link-icon {
     animation-name: move-up-and-back;
     animation-duration: .5s;
 }
@@ -139,7 +139,7 @@
     }
 
 
-    .nav .open a {
+    .nav .open li {
         border-top: 1px solid var(--dark-bg);
     }
 
