@@ -85,6 +85,11 @@
         font-size: 0.8rem;
     }
 
+     .text span {
+         font-weight: 900;
+         font-size: 1rem;
+     }
+
     .about>.textArea>img {
         height: auto;
         width: 100%;
