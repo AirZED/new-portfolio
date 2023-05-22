@@ -25,4 +25,24 @@
         padding: 5rem 1rem 4rem 1rem;
         height: auto;
     }
+
+    .contact p {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+    }
+
+    .contact a {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width:500px) {
+    .contact p {
+        font-size: 0.8rem;
+
+    }
+
+    .contact a {
+        font-size: 1rem;
+    }
 }

@@ -78,10 +78,10 @@
 
 @media (max-width:500px) {
 
-     .text>p {
-         font-weight: 300;
-         font-size: 0.8rem;
-     }
+    .text>p {
+        font-weight: 300;
+        font-size: 0.8rem;
+    }
 
     .about>.textArea>img {
         height: auto;
