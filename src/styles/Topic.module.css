@@ -5,7 +5,11 @@
     font-weight: 900;
     font-size: 2.4rem;
     color: var(--lessdark-bg);
-
-
     border-bottom: .5px solid var(--lessdark-bg);
+}
+
+@media (max-width:500px) {
+    .topic {
+        font-size: 2rem;
+    }
 }
