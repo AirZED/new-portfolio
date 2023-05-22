@@ -56,7 +56,34 @@
 @media (max-width:800px) {
     .projects {
         padding: 5rem 1rem 0rem 1rem;
+        position: relative;
+        pointer-events: none;
     }
+
+    .img {
+        position: static;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: none;
+        transform: none;
+    }
+
+    .project div {
+        position: absolute;
+        height: auto;
+        background: var(--dark-bg);
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: .5rem 0rem;
+    }
+
+    .project div>* {
+        color: var(--light-bg);
+    }
+
+
 
     .project .project-name {
         font-size: 2rem;

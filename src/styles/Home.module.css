@@ -121,12 +121,12 @@
     }
 
     .topic p {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
 }
 
-@media (max-width:500px) {
+@media (max-width:550px) {
     .topic h1 {
         font-size: 5rem;
         line-height: 5.5rem;

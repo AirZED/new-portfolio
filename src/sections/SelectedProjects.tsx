@@ -17,7 +17,7 @@ const SelectedProjects = forwardRef((props, ref: any) => {
         <Topic
           content={Contx.width > 699 ? "Some Selected Projects" : "Projects"}
         />
-        <span>Build year</span>
+        <span>BUILD YEAR</span>
       </div>
 
       {projectData.map((el) => (

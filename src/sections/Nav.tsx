@@ -108,7 +108,7 @@ const Nav = ({ componentsRef }: NavBarProps) => {
       <nav className={style.nav}>
         <div className={style.open}>
           <LogoSection openNavHandler={openNavHandler} />
-          {NavEntities}
+          <div className={style["nav-entities"]}>{NavEntities}</div>
         </div>
         <div className={style["more-info"]}>food</div>
       </nav>

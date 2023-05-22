@@ -69,6 +69,7 @@
     align-items: center;
     justify-content: space-between;
     color: var(--dark-bg);
+    cursor: pointer;
 }
 
 .nav li>* {
@@ -132,6 +133,13 @@
 
     }
 
+    .nav .open>.nav-entities {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
     .nav .open>.logo {
         justify-content: space-between;
         height: 4rem;
@@ -140,8 +148,9 @@
     }
 
 
-    .nav .open li {
+    .nav .open>.nav-entities li {
         border-top: 1px solid var(--dark-bg);
+        width: 100%;
     }
 
     .nav.close .close-menu .close-nav {
