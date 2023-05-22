@@ -5,9 +5,6 @@
     height: auto;
 }
 
-.about>* {
-    /* color: var(--white-bg); */
-}
 
 .about .topic {
     margin: 2rem 0rem;
