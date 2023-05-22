@@ -15,10 +15,9 @@
     gap: 1rem;
     align-items: start;
     justify-content: center;
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0;
 
 }
-
 
 .about>.textArea>img {
     height: 20rem;
@@ -77,6 +76,9 @@
 }
 
 @media (max-width:500px) {
+    .about .topic {
+        margin: 1rem 0rem;
+    }
 
     .text>p {
         font-weight: 300;

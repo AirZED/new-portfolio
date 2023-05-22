@@ -73,6 +73,11 @@
 }
 
 @media (max-width:500px) {
+
+    .project {
+        padding-top: 1rem;
+    }
+
     .project .project-name {
         font-size: 1.5rem;
     }
