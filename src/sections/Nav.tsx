@@ -71,7 +71,7 @@ const Nav = ({ componentsRef }: NavBarProps) => {
     return (
       <nav className={navClassName}>
         <h1 className={style.name}>
-          MFONISO <span>UKPABIO</span>
+          {Contx.pageWidth > 500 ? "MFONISO UKPABIO" : "M"}
         </h1>
 
         <div className={style["close-menu"]}>
