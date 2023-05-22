@@ -59,29 +59,29 @@
     }
 
     .project .project-name {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .project .project-stack {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
 
     .project .project-date {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
 }
 
 @media (max-width:500px) {
     .project .project-name {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .project .project-stack {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 
     .project .project-date {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
