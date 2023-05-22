@@ -63,9 +63,6 @@
         margin: 0
     }
 
-    .about .text {
-        /* width: 90% */
-    }
 
     .text>p {
         font-weight: 300;
@@ -80,6 +77,11 @@
 }
 
 @media (max-width:500px) {
+
+     .text>p {
+         font-weight: 300;
+         font-size: 0.8rem;
+     }
 
     .about>.textArea>img {
         height: auto;
