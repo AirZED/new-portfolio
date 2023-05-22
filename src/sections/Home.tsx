@@ -1,13 +1,10 @@
 //importing from react-router-dom
 import { scrollToView } from "../utils/utils";
 import { ComponentRefs } from "../App";
-
 // importing custom hook
 import useAnimate from "../hooks/useAnimate";
-
 // importing style
 import style from "./../styles/Home.module.css";
-
 // importing from react icons
 import { MdOutlineArrowOutward } from "react-icons/md";
 

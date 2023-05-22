@@ -1,17 +1,14 @@
 // importing from react
-import { useRef, forwardRef } from "react";
+import { forwardRef } from "react";
 // importing style
 import style from "./../styles/SelectedProjects.module.css";
-
 // importing supporting components
 import Project from "../components/Project";
 import Topic from "../components/Topic";
-
 // importing data
 import projectData from "../assets/projects_data";
 
 const SelectedProjects = forwardRef((props, ref: any) => {
-  // const projectRef = useRef<HTMLDivElement | null>(null);
   return (
     <div className={style.projects} id="projects" ref={ref}>
       <div className={style["projects-header"]}>
