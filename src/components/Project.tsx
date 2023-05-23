@@ -17,14 +17,16 @@ const Project = ({
   url,
 }: ProjectProps): JSX.Element => {
   return (
-    <a className={style.project} href={url} target="_blank">
-      <img src={image} className={style.img} alt={topic} />
-      <div>
-        <h1 className={style["project-name"]}>{topic}</h1>
-        <p className={style["project-stack"]}>{stack}</p>
+    <div className={style.project}>
+      <div className={style["project-child"]}>
+        <img src={image} className={style.img} alt={topic} />
+        <div className={style["project-name-section"]}>
+          <h1 className={style["project-name"]}>{topic}</h1>
+          <p className={style["project-stack"]}>{stack}</p>
+        </div>
+        <p className={style["project-date"]}>({doneAt.slice(-2)})</p>
       </div>
-      <p className={style["project-date"]}>({doneAt.slice(-2)})</p>
-    </a>
+    </div>
   );
 };
 

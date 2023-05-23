@@ -3,33 +3,37 @@
     height: auto;
     width: 100%;
     border-bottom: .5px solid var(--lessdark-bg);
-    padding-top: 2rem;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
     cursor: pointer;
     color: var(--dark-bg);
 }
 
-.project:active * {
+.project .project-child {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.project:active .project-child * {
     color: var(--lessdark-bg);
 }
 
-.project .project-name {
+.project .project-child .project-name {
     font-weight: 300;
     font-size: 3rem;
 }
 
-.project .project-stack {
+.project .project-child .project-stack {
     font-weight: 100;
     font-size: 2rem;
 }
 
-.project .project-date {
+.project .project-child .project-date {
     font-size: 4rem;
 }
 
-.img {
+.project-child .img {
 
     right: 0;
     top: 0;
@@ -43,7 +47,7 @@
     transition: all .5s ease-in-out;
 }
 
-.project:hover .img {
+.project:hover .project-child .img {
     visibility: visible;
     opacity: 1;
     width: 50%;
@@ -55,15 +59,23 @@
 
 @media (max-width:800px) {
     .project {
-        padding: 5rem 1rem 0rem 1rem;
-        position: relative;
-        pointer-events: none;
-        border: 2px solid red;
         padding: 0;
+        pointer-events: none;
+        margin-bottom: 1.5rem;
+    }
+
+    .project .project-child {
+        padding: 0;
+
+    }
+
+    .project .project-child:hover {
+
+        background: linear-gradient(242.52deg, #D9D9D9 16.82%, rgba(217, 217, 217, 0) 59.28%);
     }
 
 
-    .img {
+    .project-child .img {
         position: static;
         width: 100%;
         opacity: 1;
@@ -71,39 +83,40 @@
         transform: none;
     }
 
-    .project>div {
+    .project .project-child .project-name-section {
         position: absolute;
-        height: auto;
+        height: 6rem;
         background: var(--dark-bg);
         bottom: 0;
         right: 0;
         left: 0;
         padding: .5rem 0rem;
         z-index: 2;
+        display: flex;
+        flex-direction: column;
 
     }
 
-    .project p {
+    .project .project-child .project-date {
         position: absolute;
         top: 1rem;
         right: 1rem;
+        line-height: 1rem;
     }
 
-    .project div>* {
+    .project .project-child div>* {
         color: var(--light-bg);
     }
 
-
-
-    .project .project-name {
+    .project .project-child .project-name {
         font-size: 2rem;
     }
 
-    .project .project-stack {
+    .project .project-child .project-stack {
         font-size: 1.1rem;
     }
 
-    .project .project-date {
+    .project .project-child .project-date {
         font-size: 2rem;
     }
 
@@ -112,7 +125,7 @@
 @media (max-width:500px) {
 
     .project {
-        padding-top: 1rem;
+        padding-top: 0rem;
     }
 
     .project .project-name {

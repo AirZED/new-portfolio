@@ -1,8 +1,0 @@
-.hole {
-    background: linear-gradient(rgb(20, 13, 44), rgba(5, 79, 94, 1), rgb(16, 1, 22)),
-        radial-gradient(circle at 30% 50%, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 20%, rgba(255, 0, 0, 0) 50%),
-        radial-gradient(circle at 70% 30%, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0.5) 20%, rgba(255, 0, 0, 0) 50%);
-    background-blend-mode: multiply,
-        normal,
-        normal;
-}
