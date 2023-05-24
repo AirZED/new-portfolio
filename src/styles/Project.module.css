@@ -93,15 +93,17 @@
         display: flex;
         flex-direction: column;
         border-radius: 0 0 8px 8px;
-
-
     }
 
     .project .project-child .project-date {
         position: absolute;
         top: 1rem;
         right: 1rem;
-        line-height: 1rem;
+        padding: .5rem;
+        color: var(--light-bg);
+        font-weight: 900;
+        background-color: var(--dark-bg);
+        border-radius: 30px;
     }
 
     .project .project-child div>* {
