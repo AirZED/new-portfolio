@@ -124,7 +124,7 @@
 
     .nav {
         height: auto;
-        border-bottom: .2rem solid var(--dark-bg);
+        border-bottom: 1px solid var(--dark-bg);
     }
 
     .nav .open>* {

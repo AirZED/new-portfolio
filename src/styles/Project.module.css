@@ -92,7 +92,7 @@
         opacity: 1;
         visibility: visible;
         transform: none;
-        border-radius: 0 0 8px 8px;
+        border-radius: 4px 4px 4px 4px;
     }
 
     .project .project-child .project-name-section {
@@ -106,7 +106,7 @@
         z-index: 2;
         display: flex;
         flex-direction: column;
-        border-radius: 0 0 8px 8px;
+        border-radius: 0 0 4px 4px;
     }
 
     .project .project-child .project-date {
@@ -117,7 +117,7 @@
         color: var(--light-bg);
         font-weight: 900;
         background-color: var(--dark-bg);
-        border-radius: 0 0 8px 8px;
+        border-radius: 0 0 4px 4px;
     }
 
     .project .project-child div>* {
