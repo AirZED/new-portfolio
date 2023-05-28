@@ -70,9 +70,7 @@ const Nav = ({ componentsRef }: NavBarProps) => {
 
     return (
       <nav className={navClassName}>
-        <h1 className={style.name}>
-          {Contx.pageWidth > 500 ? "MFONISO UKPABIO" : "M"}
-        </h1>
+        <h1 className={style.name}>M</h1>
 
         <div className={style["close-menu"]}>
           {navClose && <div className={style["close-nav"]}>{NavEntities}</div>}
@@ -108,7 +106,9 @@ const Nav = ({ componentsRef }: NavBarProps) => {
       <nav className={style.nav}>
         <div className={style.open}>
           <LogoSection openNavHandler={openNavHandler} />
-          <div className={style["nav-entities"]}>{NavEntities}</div>
+          <div className={style["nav-entities"]} onClick={openNavHandler}>
+            {NavEntities}
+          </div>
         </div>
         <div className={style["more-info"]}>food</div>
       </nav>

@@ -9,9 +9,9 @@
 }
 
 .topic h1 {
-    line-height: 8rem;
+    line-height: 10rem;
     font-weight: 900;
-    font-size: 9rem;
+    font-size: 10rem;
     color: var(--dark-bg);
 
 }

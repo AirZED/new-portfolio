@@ -7,6 +7,7 @@ import useAnimate from "../hooks/useAnimate";
 import style from "./../styles/Home.module.css";
 // importing from react icons
 import { MdOutlineArrowOutward } from "react-icons/md";
+import NavLinks from "../components/NavLinks";
 
 interface HomeProps {
   componentsRef: ComponentRefs;
@@ -39,13 +40,19 @@ const Home = ({ componentsRef }: HomeProps) => {
         <p>Backend and Frontend Web Developer</p>
       </div>
 
-      <div className={style.menu}>
-        <MenuItem word="About Mfoniso" componentRef={componentsRef.aboutRef} />
-        <MenuItem
-          word="Some Selected Projects"
-          componentRef={componentsRef.projectRef}
-        />
-        <MenuItem word="Contacts" componentRef={componentsRef.contactRef} />
+      <div>
+        <div className={style.menu}>
+          <MenuItem
+            word="About Mfoniso"
+            componentRef={componentsRef.aboutRef}
+          />
+          <MenuItem
+            word="Some Selected Projects"
+            componentRef={componentsRef.projectRef}
+          />
+          <MenuItem word="Contacts" componentRef={componentsRef.contactRef} />
+        </div>
+        <NavLinks />
       </div>
     </div>
   );

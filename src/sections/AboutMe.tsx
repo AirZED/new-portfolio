@@ -8,6 +8,7 @@ import displayImage from "./../assets/images/me.jpg";
 // importing supporting component
 import Topic from "../components/Topic";
 
+
 const AboutMe = forwardRef((props, ref: any) => {
   return (
     <div className={style.about} id="info" ref={ref}>

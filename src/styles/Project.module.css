@@ -5,6 +5,7 @@
     border-bottom: .5px solid var(--lessdark-bg);
     cursor: pointer;
     color: var(--dark-bg);
+    padding-top: 3rem;
 }
 
 .project .project-child {
@@ -26,11 +27,11 @@
 
 .project .project-child .project-stack {
     font-weight: 100;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .project .project-child .project-date {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .project-child .img {
@@ -55,7 +56,21 @@
 }
 
 
-@media (max-width:1200px) {}
+@media (max-width:1200px) {
+    .project .project-child .project-name {
+        font-weight: 300;
+        font-size: 2.5rem;
+    }
+
+    .project .project-child .project-stack {
+        font-weight: 100;
+        font-size: 1.3rem;
+    }
+
+    .project .project-child .project-date {
+        font-size: 2rem;
+    }
+}
 
 @media (max-width:800px) {
     .project {
@@ -71,14 +86,13 @@
 
     }
 
-
     .project-child .img {
         position: static;
         width: 100%;
         opacity: 1;
         visibility: visible;
         transform: none;
-        border-radius: 8px;
+        border-radius: 0 0 8px 8px;
     }
 
     .project .project-child .project-name-section {
@@ -97,13 +111,13 @@
 
     .project .project-child .project-date {
         position: absolute;
-        top: 1rem;
+        top: 0rem;
         right: 1rem;
         padding: .5rem;
         color: var(--light-bg);
         font-weight: 900;
         background-color: var(--dark-bg);
-        border-radius: 30px;
+        border-radius: 0 0 8px 8px;
     }
 
     .project .project-child div>* {
@@ -112,10 +126,12 @@
 
     .project .project-child .project-name {
         font-size: 2rem;
+        font-weight: 900;
     }
 
     .project .project-child .project-stack {
         font-size: 1.1rem;
+        font-weight: 300;
     }
 
     .project .project-child .project-date {
@@ -130,15 +146,21 @@
         padding-top: 0rem;
     }
 
-    .project .project-name {
-        font-size: 1.5rem;
+    .project .project-child .project-name-section {
+
+        height: 4rem;
+
     }
 
-    .project .project-stack {
-        font-size: 0.7rem;
+    .project .project-child .project-name {
+        font-size: 1.1rem;
     }
 
-    .project .project-date {
-        font-size: 1.5rem;
+    .project .project-child .project-stack {
+        font-size: 0.8rem;
+    }
+
+    .project .project-child .project-date {
+        font-size: 1rem;
     }
 }
