@@ -1,6 +1,6 @@
 .navlinks {
     /* background-color: var(--dark-bg); */
-    border: 2px solid var(--dark-bg);
+    border: 1.5px solid var(--dark-bg);
     display: flex;
     height: 4rem;
     width: -moz-fit-content;
@@ -42,14 +42,19 @@
 @media (max-width:500px) {
     .navlinks {
         width: 100%;
+        border: none;
+        border-top: 1px solid var(--dark-bg);
+        padding: 0.5rem 0rem;
+        justify-content: space-between;
+
     }
 
     .navlinks>a>* {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     .navlinks>* {
-        margin-right: 1rem;
+        margin-right: 2rem;
 
     }
 }
