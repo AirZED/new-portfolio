@@ -1,5 +1,5 @@
 .navlinks {
-    
+
     border: 1.5px solid var(--dark-bg);
     display: flex;
     height: 4rem;
@@ -54,7 +54,6 @@
     }
 
     .navlinks>* {
-        /* margin-right: 2rem; */
-
+        margin: 0;
     }
 }
