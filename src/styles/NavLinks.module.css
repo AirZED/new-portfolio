@@ -41,8 +41,15 @@
 
 @media (max-width:500px) {
     .navlinks {
-        /* background-color: var(--dark-bg); */
-        display: none;
+        width: 100%;
+    }
+
+    .navlinks>a>* {
+        font-size: 1rem;
+    }
+
+    .navlinks>* {
+        margin-right: 1rem;
 
     }
 }
