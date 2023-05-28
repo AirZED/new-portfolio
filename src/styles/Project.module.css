@@ -106,7 +106,7 @@
         z-index: 2;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-items: center;
         border-radius: 0 0 4px 4px;
     }
 
