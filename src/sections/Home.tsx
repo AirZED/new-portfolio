@@ -1,8 +1,6 @@
 //importing from react-router-dom
 import { scrollToView } from "../utils/utils";
 import { ComponentRefs } from "../App";
-// importing custom hook
-import useAnimate from "../hooks/useAnimate";
 // importing style
 import style from "./../styles/Home.module.css";
 // importing from react icons
@@ -14,9 +12,6 @@ interface HomeProps {
 }
 
 const Home = ({ componentsRef }: HomeProps) => {
-  // calling currentText hook
-  const currentText = useAnimate("Mfoniso Ukpabio");
-
   interface MenuItemProps {
     word: string;
     className?: string;
@@ -36,7 +31,7 @@ const Home = ({ componentsRef }: HomeProps) => {
   return (
     <div className={style.home}>
       <div className={style.topic}>
-        <h1>{currentText}</h1>
+        <h1>Mfoniso Ukpabio</h1>
         <p>Backend and Frontend Web Developer</p>
       </div>
 

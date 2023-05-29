@@ -2,25 +2,31 @@
     position: fixed;
     bottom: 2rem;
     right: 4rem;
-    border-radius: 3px;
+    border-radius: 99px;
     height: 3rem;
     width: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--dark-bg);
+    background: var(--light-bg);
     cursor: pointer;
     animation: showMoreBtn .2s linear;
     transition: all .5s linear;
+    box-shadow: 0rem 0.1rem .5rem var(--lessdark-bg);
 }
 
 .backtotop:hover {
-    background: var(--lessdark-bg);
+    background: var(--dark-bg);
+
+}
+
+.backtotop:hover>* {
+    color: var(--light-bg);
 }
 
 .backtotop>* {
-    font-size: 2rem;
-    color: var(--light-bg);
+    font-size: 1.5rem;
+    color: var(--dark-bg);
 }
 
 @media (max-width:700px) {

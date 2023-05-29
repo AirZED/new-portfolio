@@ -14,9 +14,7 @@ const SelectedProjects = forwardRef((props, ref: any) => {
   return (
     <div className={style.projects} id="projects" ref={ref}>
       <div className={style["projects-header"]}>
-        <Topic
-          content={Contx.width > 699 ? "Some Selected Projects" : "Projects"}
-        />
+        <Topic content="My Works" />
         <span>BUILD YEAR</span>
       </div>
 

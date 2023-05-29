@@ -5,7 +5,7 @@ interface TopicProp {
 }
 
 const Topic = ({ content }: TopicProp): JSX.Element => {
-  return <h2 className={style.topic}>{content}...</h2>;
+  return <h2 className={style.topic}>{content}</h2>;
 };
 
 export default Topic;

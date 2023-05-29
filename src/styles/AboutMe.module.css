@@ -6,17 +6,11 @@
 }
 
 
-.about .topic {
-    margin: 2rem 0rem;
-}
-
 .about>.textArea {
     display: flex;
     gap: 1rem;
     align-items: start;
     justify-content: center;
-    margin: 2rem 0;
-
 }
 
 .about>.textArea>img {
@@ -76,9 +70,7 @@
 }
 
 @media (max-width:500px) {
-    .about .topic {
-        margin: 1rem 0rem;
-    }
+   
 
     .text>p {
         font-weight: 300;

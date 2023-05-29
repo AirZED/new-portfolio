@@ -6,6 +6,8 @@ import { ComponentRefs } from "../App";
 import portfolioContext from "../store/portfolioStore";
 // importing components
 import Backdrop from "../components/Backdrop";
+import NavLinks from "../components/NavLinks";
+
 // importing supporting component
 import {
   DarkModeComponent,
@@ -51,6 +53,11 @@ const Nav = ({ componentsRef }: NavBarProps) => {
         text="About"
         to="/#info"
         componentRef={componentsRef.aboutRef}
+      />
+      <EachLink
+        text="Expertise"
+        to="/#expertise"
+        componentRef={componentsRef.expertiseRef}
       />
       <EachLink
         text="Projects"
@@ -110,7 +117,9 @@ const Nav = ({ componentsRef }: NavBarProps) => {
             {NavEntities}
           </div>
         </div>
-        <div className={style["more-info"]}>food</div>
+        <div className={style["more-info"]}>
+          <NavLinks />
+        </div>
       </nav>
     );
   };

@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { HashLink } from "react-router-hash-link";
 import style from "./../styles/Nav.module.css";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { CgClose } from "react-icons/cg";

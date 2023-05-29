@@ -56,4 +56,8 @@
     .navlinks>* {
         margin: 0;
     }
+
+    .navlinks>a>*:hover {
+        transform: none;
+    }
 }

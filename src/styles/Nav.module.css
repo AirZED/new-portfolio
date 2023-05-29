@@ -70,6 +70,7 @@
     justify-content: space-between;
     color: var(--dark-bg);
     cursor: pointer;
+    gap: .25rem;
 }
 
 .nav li>* {
@@ -189,8 +190,21 @@
     .nav .more-info {
         background: var(--nav-bg);
         height: 4rem;
-        padding: 0.3rem 2rem;
+        padding: 0rem 1rem;
         width: 100%;
+    }
+
+    .nav .more-info>div {
+        padding: 0;
+        border: none;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav .more-info>div>a {
+        padding: 0;
+        margin: 0;
+
     }
 
 }
