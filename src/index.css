@@ -45,9 +45,9 @@
 
 
 :root {
-  /* font-family: 'PP Mori', sans-serif; */
+  font-family: 'PP Mori', sans-serif;
   /* font-family: 'Roboto Mono', monospace; */
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   font-weight: 300;
   line-height: 1.5;
   --border-radius: 15px;

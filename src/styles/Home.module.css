@@ -10,8 +10,8 @@
 
 .topic h1 {
     line-height: 10rem;
-    /* font-family: 'PP Mori', sans-serif; */
-    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     font-size: 10rem;
     color: var(--dark-bg);
 
@@ -127,7 +127,7 @@
 
 @media (max-width:550px) {
     .topic h1 {
-        font-size: 5rem;
+        font-size: 4.5rem;
         line-height: 5.5rem;
         padding-top: 2rem;
     }
