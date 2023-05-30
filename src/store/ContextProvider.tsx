@@ -1,4 +1,4 @@
-import React, { ReactNode, useState, useEffect } from "react";
+import { ReactNode, useState, useEffect, Fragment } from "react";
 import portfolioContext from "./portfolioStore";
 
 type contextProps = {
@@ -22,7 +22,7 @@ const ContextProvider = ({ children }: contextProps) => {
 
     const handleWidth = () => {
       setWidth(window.innerWidth);
-    };
+    }; 
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleWidth);
@@ -37,7 +37,7 @@ const ContextProvider = ({ children }: contextProps) => {
     <portfolioContext.Provider
       value={{ darkMode, darkModeHandler, scrollPosition, pageWidth: width }}
     >
-      <div className="App">{children}</div>
+      <Fragment>{children}</Fragment>
     </portfolioContext.Provider>
   );
 };

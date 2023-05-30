@@ -1,5 +1,5 @@
 .contact {
-    padding: 5rem 4rem 6rem 4rem;
+    padding: 5rem 4rem 0rem 4rem;
     height: auto;
 }
 
@@ -21,7 +21,7 @@
 
 @media (max-width:700px) {
     .contact {
-        padding: 5rem 1rem 4rem 1rem;
+        padding: 4rem 1rem 0rem 1rem;
         height: auto;
     }
 
@@ -30,17 +30,18 @@
     }
 
     .contact a {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+        margin-top: .5rem;
     }
 }
 
 @media (max-width:500px) {
     .contact p {
-        font-size: 0.8rem;
+        font-size: 1rem;
 
     }
 
     .contact a {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }

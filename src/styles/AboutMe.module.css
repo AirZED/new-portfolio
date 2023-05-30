@@ -1,5 +1,5 @@
 .about {
-    padding: 8rem 4rem 0rem 4rem;
+    padding: 6rem 4rem 0rem 4rem;
     color: var(--dark-bg);
     background: var(--light-bg);
     height: auto;
@@ -25,7 +25,6 @@
 .text p {
     font-size: 1.7rem;
     font-weight: 300;
-    margin-bottom: 1rem;
     text-align: justify;
 }
 
@@ -70,7 +69,7 @@
 }
 
 @media (max-width:500px) {
-   
+
 
     .text>p {
         font-weight: 300;

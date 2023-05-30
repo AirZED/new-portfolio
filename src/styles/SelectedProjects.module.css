@@ -1,10 +1,7 @@
 .projects {
-    padding: 5rem 4rem 0rem 4rem;
+    padding: 6rem 4rem 0rem 4rem;
     height: auto;
 }
-
-
-
 
 .projects .projects-header {
     display: flex;
@@ -18,27 +15,28 @@
 }
 
 .projects .see-more-projects {
-    padding-top: 1.5rem;
+    padding-top: 1.2rem;
 }
 
 .projects .see-more-projects h2 {
     text-decoration: none;
 }
 
-.projects .see-more-projects p {
-    font-size: 1.1rem;
+.projects .see-more-projects p,
+.projects .see-more-projects>p>a {
+    font-size: 1.5rem;
+    color: var(--dark-bg);
 
 }
 
 .projects .see-more-projects p a {
-    color: var(--dark-bg);
-    font-size: 1.5rem;
     margin-left: .3rem;
+    font-weight: 900;
 }
 
 @media (max-width:700px) {
     .projects {
-        padding: 5rem 1rem 0rem 1rem;
+        padding: 4rem 1rem 0rem 1rem;
     }
 
     .projects .projects-header span {
@@ -47,11 +45,16 @@
 
     }
 
-    .projects .see-more-projects h2 {
-        font-size: 1.5rem;
+    .projects .see-more-projects {
+        padding-top: .5rem;
     }
 
-    .projects .see-more-projects p {
+    .projects .see-more-projects h2 {
+        font-size: 1.3rem;
+    }
+
+    .projects .see-more-projects p,
+    .projects .see-more-projects>p>a {
         font-size: 1.3rem;
     }
 
@@ -68,11 +71,16 @@
 
     }
 
+    .projects .see-more-projects {
+        padding-top: .2rem;
+    }
+
     .projects .see-more-projects h2 {
         font-size: 1.1rem;
     }
 
-    .projects .see-more-projects p {
-        font-size: 1rem;
+    .projects .see-more-projects p,
+    .projects .see-more-projects p>a {
+        font-size: 1.1rem;
     }
 }

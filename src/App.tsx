@@ -12,6 +12,7 @@ import SelectedProjects from "./sections/SelectedProjects";
 import ContactMe from "./sections/ContactMe";
 import BacktoTop from "./components/BacktoTop";
 import Footer from "./sections/Footer";
+import ProjectSection from "./components/ProjectSection";
 
 // importing style
 import "./App.css";
@@ -32,6 +33,7 @@ const App = () => {
   return (
     <ContextProvider>
       <Nav componentsRef={componentsRef} />
+      {/* <ProjectSection/> */}
       <Home componentsRef={componentsRef} />
       <AboutMe ref={aboutRef} />
       <Specialtys ref={expertiseRef} />

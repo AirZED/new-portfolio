@@ -1,0 +1,26 @@
+.porject-portal {
+    position: relative;
+    /* z-index: 1; */
+}
+
+.child-project {
+    border: 1px solid var(--dark-bg);
+    background: var(--light-bg);
+    overflow-y: scroll;
+    position: relative;
+    width: 70vw;
+    height: 80vh;
+    position: absolute;
+    margin: 0rem auto;
+    top: 4rem;
+    z-index: 101;
+}
+
+
+.child-project .footer {
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
