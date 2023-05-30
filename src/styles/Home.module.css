@@ -10,8 +10,8 @@
 
 .topic h1 {
     line-height: 10rem;
-    font-family: 'PP Mori', sans-serif;
-    font-weight: 900;
+    /* font-family: 'PP Mori', sans-serif; */
+    font-weight: 700;
     font-size: 10rem;
     color: var(--dark-bg);
 
