@@ -1,13 +1,19 @@
+// importing from react
+import { useContext } from "react";
 // importing style
 import style from "./../styles/Project.module.css";
+// importing context
+import portfolioContext from "../store/portfolioStore";
 
-interface ProjectProps {
+export type ProjectProps = {
   topic: string;
   image: string;
   doneAt: string;
   stack: string;
+  description?: string;
   url: string;
-}
+  id: number | string;
+};
 
 const Project = ({
   topic,
@@ -15,9 +21,14 @@ const Project = ({
   doneAt,
   stack,
   url,
+  id,
 }: ProjectProps): JSX.Element => {
+  const Contx = useContext(portfolioContext);
   return (
-    <div className={style.project}>
+    <div
+      className={style.project}
+      onClick={Contx.openProjectHandler.bind(null, id)}
+    >
       <div className={style["project-child"]}>
         <img src={image} className={style.img} alt={topic} />
         <div className={style["project-name-section"]}>

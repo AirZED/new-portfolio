@@ -1,6 +1,6 @@
 // importing from react
-import { forwardRef, useContext } from "react";
-import portfolioContext from "../store/portfolioStore";
+import { forwardRef } from "react";
+
 // importing style
 import style from "./../styles/SelectedProjects.module.css";
 // importing supporting components
@@ -10,7 +10,6 @@ import Topic from "../components/Topic";
 import projectData from "../assets/projects_data";
 
 const SelectedProjects = forwardRef((props, ref: any) => {
-  const Contx = useContext(portfolioContext);
   return (
     <div className={style.projects} id="projects" ref={ref}>
       <div className={style["projects-header"]}>
@@ -26,6 +25,7 @@ const SelectedProjects = forwardRef((props, ref: any) => {
           doneAt={el.buildDate}
           stack={el.stack}
           key={el.id}
+          id={el.id}
         />
       ))}
 

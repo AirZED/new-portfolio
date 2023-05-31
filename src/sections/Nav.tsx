@@ -36,7 +36,11 @@ const Nav = ({ componentsRef }: NavBarProps) => {
   };
 
   const openNavHandler = () => {
-    setOpenNav((prev) => !prev);
+    setOpenNav(true);
+  };
+
+  const closeNavHandler = () => {
+    setOpenNav(false);
   };
 
   useEffect(() => {
@@ -112,8 +116,8 @@ const Nav = ({ componentsRef }: NavBarProps) => {
     return (
       <nav className={style.nav}>
         <div className={style.open}>
-          <LogoSection openNavHandler={openNavHandler} />
-          <div className={style["nav-entities"]} onClick={openNavHandler}>
+          <LogoSection openNavHandler={closeNavHandler} />
+          <div className={style["nav-entities"]} onClick={closeNavHandler}>
             {NavEntities}
           </div>
         </div>
@@ -128,10 +132,9 @@ const Nav = ({ componentsRef }: NavBarProps) => {
     <Fragment>
       {!openNav && <BigScreenNav />}
       {openNav && (
-        <div>
-          <Backdrop closeBackdrop={openNavHandler} />
+        <Backdrop closeBackdrop={closeNavHandler}>
           <SmallScreenNav />
-        </div>
+        </Backdrop>
       )}
     </Fragment>
   );

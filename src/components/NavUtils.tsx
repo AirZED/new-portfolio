@@ -45,7 +45,7 @@ interface LogoSectionProps {
 export const LogoSection = ({ openNavHandler }: LogoSectionProps) => {
   return (
     <div className={style.logo}>
-      <h1 className={style.name}>MFONISO UKPABIO</h1>
+      <h1 className={style.name}>M</h1>
       <CgClose className={style["close-icon"]} onClick={openNavHandler} />
     </div>
   );

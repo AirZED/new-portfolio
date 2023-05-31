@@ -1,17 +1,39 @@
 import { ReactNode, useState, useEffect, Fragment } from "react";
 import portfolioContext from "./portfolioStore";
 
+// importing data
+import projectData from "./../assets/projects_data";
+
 type contextProps = {
   children: ReactNode[] | ReactNode;
+};
+
+type ProjectProps = {
+  isActive: boolean;
+  project: any;
 };
 
 const ContextProvider = ({ children }: contextProps) => {
   const [darkMode, setDarkMode] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [width, setWidth] = useState(0);
+  const [project, setProject] = useState<ProjectProps>({
+    isActive: false,
+    project: null,
+  });
 
-  const darkModeHandler = () => {
+  const darkModeHandler = (): void => {
     setDarkMode((prev) => !prev);
+  };
+
+  const openProjectHandler = (id: number | string) => {
+    const filteredProject = projectData.find((el) => id === el.id);
+    if (filteredProject)
+      setProject({ isActive: true, project: filteredProject });
+  };
+
+  const closeProjectHandler = () => {
+    setProject({ isActive: false, project: null });
   };
 
   useEffect(() => {
@@ -22,7 +44,7 @@ const ContextProvider = ({ children }: contextProps) => {
 
     const handleWidth = () => {
       setWidth(window.innerWidth);
-    }; 
+    };
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleWidth);
@@ -33,10 +55,18 @@ const ContextProvider = ({ children }: contextProps) => {
     };
   }, []);
 
+  const contextValue = {
+    darkMode,
+    darkModeHandler,
+    scrollPosition,
+    pageWidth: width,
+    project,
+    openProjectHandler,
+    closeProjectHandler
+  };
+
   return (
-    <portfolioContext.Provider
-      value={{ darkMode, darkModeHandler, scrollPosition, pageWidth: width }}
-    >
+    <portfolioContext.Provider value={contextValue}>
       <Fragment>{children}</Fragment>
     </portfolioContext.Provider>
   );

@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, Fragment } from "react";
 
 // importing Context
 import ContextProvider from "./store/ContextProvider";
@@ -31,17 +31,17 @@ const App = () => {
   const componentsRef = { projectRef, aboutRef, contactRef, expertiseRef };
 
   return (
-    <ContextProvider>
+    <Fragment>
+      {Contx.project.isActive && <ProjectSection data={Contx.project} />}
       <Nav componentsRef={componentsRef} />
-      {/* <ProjectSection/> */}
       <Home componentsRef={componentsRef} />
       <AboutMe ref={aboutRef} />
       <Specialtys ref={expertiseRef} />
       <SelectedProjects ref={projectRef} />
       <ContactMe ref={contactRef} />
       <Footer />
-      {Contx.scrollPosition > window.innerHeight && <BacktoTop />}
-    </ContextProvider>
+      {Contx.scrollPosition > window.innerHeight / 2 && <BacktoTop />}
+    </Fragment>
   );
 };
 

@@ -3,8 +3,10 @@
     height: 100vh;
     position: fixed;
     background: var(--backdrop);
+    z-index: 99;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
+    overflow: hidden;
 }

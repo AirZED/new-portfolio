@@ -1,26 +1,56 @@
-.porject-portal {
-    position: relative;
-    /* z-index: 1; */
-}
-
 .child-project {
+    position: relative;
     border: 1px solid var(--dark-bg);
     background: var(--light-bg);
     overflow-y: scroll;
-    position: relative;
-    width: 70vw;
-    height: 80vh;
-    position: absolute;
+    width: 70%;
+    height: 80%;
     margin: 0rem auto;
     top: 4rem;
-    z-index: 101;
 }
 
 
-.child-project .footer {
-    height: auto;
-    position: fixed;
+.child-project img {
+    width: 100%;
+}
+
+.child-project .next {
+    position: sticky;
     bottom: 0;
+    left: auto;
     right: 0;
-    left: 0;
+    height: auto;
+    width: 15rem;
+    margin: 0;
+    background-color: var(--light-bg);
+}
+
+
+.close-icon {
+    cursor: pointer;
+}
+
+.child-project::-webkit-scrollbar {
+    width: .6rem;
+    color: var(--light-bg);
+}
+
+.child-project::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.child-project::-webkit-scrollbar-thumb {
+    background: var(--dark-bg);
+    border-radius: .3rem;
+}
+
+
+
+@media (max-width:700px) {
+    .child-project {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
 }

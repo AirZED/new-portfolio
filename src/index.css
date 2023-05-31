@@ -44,6 +44,20 @@
 }
 
 
+html::-webkit-scrollbar {
+  width: .8rem;
+  color: var(--light-bg);
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--dark-bg);
+  border-radius: .3rem;
+}
+
 :root {
   font-family: 'PP Mori', sans-serif;
   /* font-family: 'Roboto Mono', monospace; */
@@ -54,7 +68,7 @@
   --dark-bg: #000000;
   --light-bg: #e5e5e5;
   --lessdark-bg: #3d3d3d;
-  --backdrop: #000000de;
+  --backdrop: #000000ec;
   --accent-color1: #e96928;
   --accent-color2: #6cd8ec;
   --nav-bg: #f8f8f8;
@@ -69,7 +83,6 @@
   --lessdark-bg: #b8b7b7;
   --accent-color: #6cd8ec;
   --nav-bg: #525151;
-
 }
 
 * {
