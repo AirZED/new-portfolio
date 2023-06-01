@@ -14,27 +14,7 @@ import Backdrop from "./Backdrop";
 const ProjectSection = (props: any): JSX.Element => {
   const Contx = useContext(portfolioContext);
   const data: ProjectProps = props.data.project;
-  const nextRef = useRef<HTMLDivElement>(null);
-  const nextParentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const nextElement = nextRef.current;
-    const nextParentElement = nextParentRef.current;
-
-    if (nextElement && nextParentElement) {
-      const rect = nextElement.getBoundingClientRect();
-      const parentRect = nextParentElement.getBoundingClientRect();
-      if (Contx.pageWidth > 700) {
-        nextElement.style.left = `${
-          parentRect.left + parentRect.width - rect.width - 10
-        }px`;
-
-        nextElement.style.top = `${
-          parentRect.top + parentRect.height - rect.height
-        }px`;
-      }
-    }
-  }, [Contx.pageWidth, Contx.scrollPosition]);
+  const projectRef = useRef<HTMLDivElement>(null);
 
   const [showProject, setShowProject] = useState(false);
 
@@ -49,11 +29,10 @@ const ProjectSection = (props: any): JSX.Element => {
   const ViewProject = () => {
     return (
       <Backdrop closeBackdrop={closeProjectHandler}>
-        <div className={style["child-project"]} ref={nextParentRef}>
-          <CgClose
-            onClick={Contx.closeProjectHandler}
-            className={style["close-icon"]}
-          />
+        <div className={style["child-project"]} ref={projectRef}>
+          <div className={style["close-sec"]}>
+            <CgClose onClick={Contx.closeProjectHandler} />
+          </div>
           <div className={style.description}>
             <strong>Frontend Dev</strong>
             <h1>{data.topic}</h1>
@@ -68,10 +47,6 @@ const ProjectSection = (props: any): JSX.Element => {
             </div>
           </div>
           <img src={data.image} alt={data.topic} />
-
-          <div className={style.next} ref={nextRef}>
-            <h2>Next Project</h2>
-          </div>
         </div>
       </Backdrop>
     );
