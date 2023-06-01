@@ -1,3 +1,7 @@
+.backdrop {
+    height: auto;
+}
+
 .child-project {
     position: relative;
     border: 1px solid var(--dark-bg);
@@ -49,7 +53,7 @@
 @media (max-width:700px) {
     .child-project {
         width: 100%;
-        height: auto;
+        height: 100%;
         padding: 1rem;
     }
 
