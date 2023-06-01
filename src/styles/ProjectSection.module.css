@@ -7,6 +7,7 @@
     border: 1px solid var(--dark-bg);
     background: var(--light-bg);
     overflow-y: scroll;
+    overflow-x: hidden;
     width: 70%;
     height: 80%;
     margin: 0rem auto;
@@ -19,11 +20,8 @@
 }
 
 .child-project .next {
-    position: sticky;
-    bottom: 0;
-    left: auto;
-    right: 0;
-    height: auto;
+    position: fixed;
+    height: 6rem;
     width: 15rem;
     margin: 0;
     background-color: var(--light-bg);
@@ -48,6 +46,8 @@
     border-radius: .3rem;
 }
 
+@media (max-width:1000px) {}
+
 
 
 @media (max-width:700px) {
@@ -55,12 +55,15 @@
         width: 100%;
         height: 100%;
         padding: 1rem;
+
     }
 
-    .child-project .next{
-        position: fixed;
+
+    .child-project .next {
+        bottom: 0;
         right: 0;
         left: auto;
+        top: auto;
     }
 
 }

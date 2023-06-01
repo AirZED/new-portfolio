@@ -62,7 +62,7 @@ const ContextProvider = ({ children }: contextProps) => {
     pageWidth: width,
     project,
     openProjectHandler,
-    closeProjectHandler
+    closeProjectHandler,
   };
 
   return (
