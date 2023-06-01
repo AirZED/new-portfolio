@@ -57,4 +57,10 @@
         padding: 1rem;
     }
 
+    .child-project .next{
+        position: fixed;
+        right: 0;
+        left: auto;
+    }
+
 }
