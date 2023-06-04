@@ -22,7 +22,7 @@ const ProjectSection = (): JSX.Element => {
   const index = project_data.findIndex((el) => id && +id === el.id);
   const previousProject = index > 0 && project_data[index - 1];
   const nextProject =
-    index + 1 < project_data.length && project_data[index + 1];
+    index + 1 < project_data.length ? project_data[index + 1] : project_data[0];
 
   // navigating away
   const closeProjectHandler = () => {
