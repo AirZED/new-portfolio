@@ -10,7 +10,7 @@
     right: 2rem;
     height: 8rem;
     width: 20rem;
-    border-radius: 6px;
+    border-radius: 5px;
     background: var(--light-bg);
     position: fixed;
     border: 1px solid var(--dark-bg);
