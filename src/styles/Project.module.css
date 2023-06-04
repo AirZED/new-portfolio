@@ -136,7 +136,7 @@
     }
 
     .project .project-child .project-date {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
 }
@@ -162,6 +162,6 @@
     }
 
     .project .project-child .project-date {
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
 }

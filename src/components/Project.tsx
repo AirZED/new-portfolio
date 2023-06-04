@@ -31,7 +31,7 @@ const Project = ({
           <h1 className={style["project-name"]}>{topic}</h1>
           <p className={style["project-stack"]}>{stack}</p>
         </div>
-        <p className={style["project-date"]}>({doneAt.slice(-2)})</p>
+        <p className={style["project-date"]}>/{doneAt}</p>
       </div>
     </Link>
   );

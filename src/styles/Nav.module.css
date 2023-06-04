@@ -195,8 +195,9 @@
         padding: 0 1rem !important;
     }
 
-    .name {
+    .nav>.open .name {
         font-size: 1rem;
+        color: var(--light-bg);
     }
 
     .nav .more-info {
