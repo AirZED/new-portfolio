@@ -136,6 +136,10 @@
         position: static;
     }
 
+    .child-project .next h2 {
+        font-size: 1.3rem;
+    }
+
     .child-project .next div {
         justify-content: space-between;
     }
