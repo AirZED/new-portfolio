@@ -1,19 +1,16 @@
 import React, { useContext, useRef, Fragment } from "react";
+import { Routes, Route } from "react-router-dom";
 
 // importing Context
-import ContextProvider from "./store/ContextProvider";
 import portfolioContext from "./store/portfolioStore";
 // Importing components
-import Home from "./sections/Home";
-import Nav from "./sections/Nav";
-import AboutMe from "./sections/AboutMe";
-import Specialtys from "./sections/Specialty";
-import SelectedProjects from "./sections/SelectedProjects";
-import ContactMe from "./sections/ContactMe";
-import BacktoTop from "./components/BacktoTop";
-import Footer from "./sections/Footer";
-import ProjectSection from "./components/ProjectSection";
-
+import Layout from "./pages/sections/Layout";
+import Home from "./pages/sections/Home";
+import AboutMe from "./pages/sections/AboutMe";
+import Specialtys from "./pages/sections/Specialty";
+import SelectedProjects from "./pages/sections/SelectedProjects";
+import ContactMe from "./pages/sections/ContactMe";
+import ProjectSection from "./pages/ProjectSection";
 // importing style
 import "./App.css";
 
@@ -30,18 +27,25 @@ const App = () => {
 
   const componentsRef = { projectRef, aboutRef, contactRef, expertiseRef };
 
+  const HomeRoute = () => {
+    return (
+      <Fragment>
+        <Home componentsRef={componentsRef} />
+        <AboutMe ref={aboutRef} />
+        <Specialtys ref={expertiseRef} />
+        <SelectedProjects ref={projectRef} />
+        <ContactMe ref={contactRef} />
+      </Fragment>
+    );
+  };
+
   return (
-    <Fragment>
-      {Contx.project.isActive && <ProjectSection data={Contx.project} />}
-      <Nav componentsRef={componentsRef} />
-      <Home componentsRef={componentsRef} />
-      <AboutMe ref={aboutRef} />
-      <Specialtys ref={expertiseRef} />
-      <SelectedProjects ref={projectRef} />
-      <ContactMe ref={contactRef} />
-      <Footer />
-      {Contx.scrollPosition > window.innerHeight / 2 && <BacktoTop />}
-    </Fragment>
+    <Layout componentsRef={componentsRef}>
+      <Routes>
+        <Route path="/" element={<HomeRoute />} />
+        <Route path="/projects/:id" element={<ProjectSection />} />
+      </Routes>
+    </Layout>
   );
 };
 

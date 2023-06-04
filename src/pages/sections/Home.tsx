@@ -1,11 +1,11 @@
 //importing from react-router-dom
-import { scrollToView } from "../utils/utils";
-import { ComponentRefs } from "../App";
+import { scrollToView } from "../../utils/utils";
+import { ComponentRefs } from "../../App";
 // importing style
-import style from "./../styles/Home.module.css";
+import style from "./../../styles/Home.module.css";
 // importing from react icons
 import { MdOutlineArrowOutward } from "react-icons/md";
-import NavLinks from "../components/NavLinks";
+import NavLinks from "../../components/NavLinks";
 
 interface HomeProps {
   componentsRef: ComponentRefs;

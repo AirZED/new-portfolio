@@ -2,12 +2,12 @@
 import { forwardRef } from "react";
 
 // importing style
-import style from "./../styles/SelectedProjects.module.css";
+import style from "./../../styles/SelectedProjects.module.css";
 // importing supporting components
-import Project from "../components/Project";
-import Topic from "../components/Topic";
+import Project from "../../components/Project";
+import Topic from "../../components/Topic";
 // importing data
-import projectData from "../assets/projects_data";
+import projectData from "../../assets/projects_data";
 
 const SelectedProjects = forwardRef((props, ref: any) => {
   return (
@@ -19,13 +19,15 @@ const SelectedProjects = forwardRef((props, ref: any) => {
 
       {projectData.map((el) => (
         <Project
+          github={el.github}
           url={el.url}
           topic={el.topic}
           image={el.image}
-          doneAt={el.buildDate}
+          doneAt={el.doneAt}
           stack={el.stack}
           key={el.id}
           id={el.id}
+          category={el.category}
         />
       ))}
 

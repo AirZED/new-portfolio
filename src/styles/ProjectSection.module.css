@@ -1,16 +1,102 @@
-.backdrop {
-    height: auto;
+.child-project {
+    background: var(--light-bg);
+    margin: 0rem auto;
+    padding: 5rem 4rem 2rem 4rem;
 }
 
-.child-project {
-    position: relative;
+.child-project .description {}
+
+
+.child-project .next {
+    bottom: 2rem;
+    right: 2rem;
+    height: 8rem;
+    width: 20rem;
+    border-radius: 6px;
     background: var(--light-bg);
-    overflow-y: scroll;
-    overflow-x: hidden;
-    width: 70%;
-    height: 80%;
-    margin: 0rem auto;
-    top: 4rem;
+    position: fixed;
+    border: 1px solid var(--dark-bg);
+    padding: 1rem;
+}
+
+.child-project .next div {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.child-project .next div p {
+    font-size: 1.2rem;
+}
+
+.child-project .next div .icon {
+    border: 1px solid transparent;
+    background: var(--dark-bg);
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+}
+
+.child-project .next div .icon>* {
+    fill: var(--light-bg);
+    color: var(--light-bg);
+}
+
+.child-project .next h2 {
+    font-size: 2rem;
+}
+
+.child-project .description strong {
+    border-bottom: 2px solid var(--accent-color2);
+}
+
+.child-project .description h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.child-project .description>p {
+    margin: 2rem 0;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.child-project .description .repo-stack {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.child-project .description .repo-stack h3 {
+    font-size: 1.5rem;
+}
+
+.child-project .description .repo-stack .repo{
+    display: flex;
+    gap: 2rem;
+}
+
+.child-project .description .repo-stack a {
+    font-size: 1.3rem;
+    cursor: pointer;
+     display: flex;
+    align-items: center;
+    
+    justify-content: center;
+    gap: .5rem;
+    color: var(--dark-bg);
+}
+
+.child-project .description .repo-stack a:hover {
+    color: var(--accent-color2);
 }
 
 
@@ -19,55 +105,30 @@
 }
 
 .close-sec {
-    position: sticky;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: auto;
     display: flex;
-    justify-content: flex-end;
-
-
-
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
 }
 
 .close-sec>* {
     cursor: pointer;
-    font-size: 1rem;
-    color: var(--light-bg);
-    background: var(--accent-color1);
-    width: 1.8rem;
-    height: 1.8rem;
+    color: var(--dark-bg);
+    width: 2.5rem;
+    height: 2.5rem;
 
 }
 
-.child-project::-webkit-scrollbar {
-    width: .6rem;
-    color: var(--light-bg);
-}
 
-.child-project::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.child-project::-webkit-scrollbar-thumb {
-    background: var(--dark-bg);
-    border-radius: .3rem;
-}
 
 @media (max-width:1000px) {}
-
-
 
 @media (max-width:700px) {
     .child-project {
         width: 100%;
-        height: 100%;
-        padding: 1rem;
-
+        height: auto;
+        padding: 5rem 1rem 1rem 1rem;
     }
-
-
-
 
 }

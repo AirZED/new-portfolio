@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 // importing supporting component
-import Topic from "../components/Topic";
+import Topic from "../../components/Topic";
 // Importing style
-import style from "./../styles/Specialtys.module.css";
+import style from "./../../styles/Specialtys.module.css";
 // importing icons
 
 import { FaReact, FaNodeJs } from "react-icons/fa";

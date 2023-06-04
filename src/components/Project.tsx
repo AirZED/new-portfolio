@@ -1,9 +1,8 @@
-// importing from react
-import { useContext } from "react";
+// importing from react-dom
+import { Link } from "react-router-dom";
 // importing style
 import style from "./../styles/Project.module.css";
 // importing context
-import portfolioContext from "../store/portfolioStore";
 
 export type ProjectProps = {
   topic: string;
@@ -13,6 +12,8 @@ export type ProjectProps = {
   description?: string;
   url: string;
   id: number | string;
+  category: string;
+  github: string;
 };
 
 const Project = ({
@@ -20,15 +21,10 @@ const Project = ({
   image,
   doneAt,
   stack,
-  url,
   id,
 }: ProjectProps): JSX.Element => {
-  const Contx = useContext(portfolioContext);
   return (
-    <div
-      className={style.project}
-      onClick={Contx.openProjectHandler.bind(null, id)}
-    >
+    <Link to={`/projects/${id}`} className={style.project}>
       <div className={style["project-child"]}>
         <img src={image} className={style.img} alt={topic} />
         <div className={style["project-name-section"]}>
@@ -37,7 +33,7 @@ const Project = ({
         </div>
         <p className={style["project-date"]}>({doneAt.slice(-2)})</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

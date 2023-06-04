@@ -1,9 +1,9 @@
 import { forwardRef } from "react";
 // importing supporting component
-import Topic from "../components/Topic";
+import Topic from "../../components/Topic";
 
 // importing style
-import style from "./../styles/ContactMe.module.css";
+import style from "./../../styles/ContactMe.module.css";
 
 // importing from react icons
 import { MdOutlineArrowOutward } from "react-icons/md";

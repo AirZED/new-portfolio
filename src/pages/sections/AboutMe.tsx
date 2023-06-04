@@ -1,13 +1,12 @@
 import { forwardRef } from "react";
 // importing style
-import style from "./../styles/AboutMe.module.css";
+import style from "./../../styles/AboutMe.module.css";
 
 // importing image
-import displayImage from "./../assets/images/me.jpg";
+import displayImage from "./../../assets/images/me.jpg";
 
 // importing supporting component
-import Topic from "../components/Topic";
-
+import Topic from "../../components/Topic";
 
 const AboutMe = forwardRef((props, ref: any) => {
   return (

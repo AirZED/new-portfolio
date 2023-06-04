@@ -6,6 +6,7 @@
     cursor: pointer;
     color: var(--dark-bg);
     padding-top: 3rem;
+    display: block;
 }
 
 .project .project-child {

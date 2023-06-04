@@ -1,31 +1,33 @@
 // importing from react
 import { Fragment, useState, useContext, useEffect } from "react";
-import { ComponentRefs } from "../App";
-
+// importing from useLocation
+import { useLocation } from "react-router-dom";
+import { ComponentRefs } from "../../App";
 // importing store
-import portfolioContext from "../store/portfolioStore";
+import portfolioContext from "../../store/portfolioStore";
 // importing components
-import Backdrop from "../components/Backdrop";
-import NavLinks from "../components/NavLinks";
+import Backdrop from "../../components/Backdrop";
+import NavLinks from "../../components/NavLinks";
 
 // importing supporting component
 import {
   DarkModeComponent,
   EachLink,
   LogoSection,
-} from "../components/NavUtils";
+} from "../../components/NavUtils";
 // importing from react-icons
 import { CgMenuRight } from "react-icons/cg";
 import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 // Importing style
-import style from "./../styles/Nav.module.css";
+import style from "./../../styles/Nav.module.css";
 
 interface NavBarProps {
   componentsRef: ComponentRefs;
 }
 
 const Nav = ({ componentsRef }: NavBarProps) => {
+  const { pathname } = useLocation();
   const Contx = useContext(portfolioContext);
   const [openNav, setOpenNav] = useState(false);
 
@@ -84,7 +86,11 @@ const Nav = ({ componentsRef }: NavBarProps) => {
         <h1 className={style.name}>M</h1>
 
         <div className={style["close-menu"]}>
-          {navClose && <div className={style["close-nav"]}>{NavEntities}</div>}
+          {navClose && (
+            <div className={style["close-nav"]}>
+              {pathname === "/" && NavEntities}
+            </div>
+          )}
 
           <div className={style["nav-icons"]}>
             {!Contx.darkMode && (
