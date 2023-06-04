@@ -2,6 +2,14 @@
     background: var(--dark-bg);
     color: var(--light-bg);
     padding: 2rem 4rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer .icon {
+    font-size: 3rem;
 }
 
 .footer>* {
@@ -12,9 +20,14 @@
     .footer {
         padding: 1.5rem 1rem 1.5rem 1rem;
         margin-top: 3rem;
+        gap: .5rem;
     }
 
     .footer>* {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    .footer .icon {
+        font-size: 2rem;
     }
 }
