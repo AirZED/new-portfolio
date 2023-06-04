@@ -124,7 +124,7 @@ const Nav = ({ componentsRef }: NavBarProps) => {
         <div className={style.open}>
           <LogoSection openNavHandler={closeNavHandler} />
           <div className={style["nav-entities"]} onClick={closeNavHandler}>
-            {NavEntities}
+            {pathname === "/" && NavEntities}
           </div>
         </div>
         <div className={style["more-info"]}>
