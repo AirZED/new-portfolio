@@ -2,6 +2,7 @@ import quotes from "./projects/quotesapp.png";
 import meals from "./projects/mealapp.png";
 import airbnb from "./projects/airbnbapp.png";
 import connectapp from "./projects/connectapp.png";
+import varenaapp from "./projects/varenaapp.png";
 
 const project_data = [
   {
@@ -52,6 +53,18 @@ const project_data = [
     url: "https://start-hub-connect.web.app/",
     description:
       "Start Hub Connect is a web application built with Firebase, ReactJS, and React Router. The platform aims to connect startup founders and entrepreneurs with investors and mentors, providing a space for individuals to network, collaborate, and grow their businesses. With a sleek and modern user interface, users can easily create a profile, browse through a directory of other users, and connect with potential collaborators or investors. The platform also offers a variety of resources and tools to help users develop and grow their businesses, including access to mentorship, funding opportunities, and educational content. Overall, Start Hub Connect represents a great opportunity for individuals in the startup space to connect and collaborate with like-minded individuals. If you're looking to expand your network and grow your business, this platform is definitely worth checking out.",
+  },
+  {
+    id: 7,
+    topic: "Varena",
+    stack: "React Js, Express Js, Node Js, MongoDB",
+    doneAt: "2022",
+    category: "Frontend Team",
+    github: "https://github.com/workshopapps/nftcreatures.web",
+    image: varenaapp,
+    url: "https://varena.app/",
+    description:
+      "Varena is a free-to-play play-to-earn online NFT battle royale game where users send their NFT characters to battle each other for ultimate supremacy. The player’s NFTs are made to compete against each other in a constant battle until there remains only one. Just like every other play-to-earn game, there is a reward the users benefit from as they play. In Varena the ultimate winner goes home with a $1000 cash reward. The battle takes place every day at a specific time (i.e 5pm WAT) and the winner is announced every day.",
   },
 ];
 
