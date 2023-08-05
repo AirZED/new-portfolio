@@ -37,6 +37,8 @@ const Nav = ({ componentsRef }: NavBarProps) => {
     Contx.darkModeHandler();
   };
 
+  // handle add to localstorage
+
   const openNavHandler = () => {
     setOpenNav(true);
   };

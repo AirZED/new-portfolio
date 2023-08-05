@@ -3,7 +3,7 @@ import { forwardRef } from "react";
 import style from "./../../styles/AboutMe.module.css";
 
 // importing image
-import displayImage from "./../../assets/images/me.jpg";
+import displayImage from "./../../assets/images/me.png";
 
 // importing supporting component
 import Topic from "../../components/Topic";
