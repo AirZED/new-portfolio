@@ -24,7 +24,7 @@
 
 .text p {
     font-size: 1.7rem;
-    font-weight: 300;
+    font-weight: 400;
     text-align: justify;
 }
 
@@ -57,7 +57,7 @@
 
 
     .text>p {
-        font-weight: 300;
+        /* font-weight: 300; */
         font-size: 1.3rem;
     }
 
@@ -72,7 +72,7 @@
 
 
     .text>p {
-        font-weight: 300;
+        /* font-weight: 300; */
         font-size: 0.8rem;
     }
 
