@@ -39,7 +39,7 @@ const NavLinks = (): JSX.Element => {
       />
       <NavLink
         icon={<h2>Resume</h2>}
-        link="https://drive.google.com/file/d/1ctGB1RLS_PBtL1uUdK2YZdl_r-Afmy2J/view?pli=1"
+        link="https://drive.google.com/file/d/1c5IQTxdh3VhJyimuoqUEG0QsAlwLNlYF/view?usp=drive_link"
       />
     </div>
   );
