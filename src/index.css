@@ -59,10 +59,10 @@ html::-webkit-scrollbar-thumb {
 }
 
 :root {
-  font-family: 'PP Mori', sans-serif;
+  /* font-family: 'PP Mori', sans-serif; */
   /* font-family: 'Roboto Mono', monospace; */
-  /* font-family: 'Poppins', sans-serif; */
-  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   line-height: 1.5;
   --border-radius: 15px;
   --dark-bg: #000000;
