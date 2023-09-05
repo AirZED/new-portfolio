@@ -32,7 +32,7 @@ const Home = ({ componentsRef }: HomeProps) => {
     <div className={style.home}>
       <div className={style.topic}>
         <h1>Mfoniso Ukpabio</h1>
-        <p>Backend and Frontend Web Developer</p>
+        <p>Backend and Frontend JavaScript Developer</p>
       </div>
 
       <div>
