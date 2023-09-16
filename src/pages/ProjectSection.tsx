@@ -62,7 +62,10 @@ const ProjectSection = (): JSX.Element => {
           </div>
           <div className={style.repo}>
             <a href={`${data.url}`}>
-              Open Project <MdOutlineArrowOutward />
+              {data.category === "Backend Dev"
+                ? "Open Project Documentation"
+                : "Open Project"}{" "}
+              <MdOutlineArrowOutward />
             </a>
             <a href={data.github}>
               View Github
