@@ -7,7 +7,7 @@ import messaging from "./projects/messaging.png"
 
 const project_data = [
   {
-    id: 9,
+    id: 3,
     topic: "Anonymous Messaging API",
     stack: "Node Js, Express and Mongo DB",
     doneAt: "2023",

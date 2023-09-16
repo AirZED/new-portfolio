@@ -62,7 +62,7 @@ const ProjectSection = (): JSX.Element => {
           </div>
           <div className={style.repo}>
             <a href={`${data.url}`}>
-              {data.category === "Backend Dev"
+              {data.category === "Backend Dev."
                 ? "Open Project Documentation"
                 : "Open Project"}{" "}
               <MdOutlineArrowOutward />
