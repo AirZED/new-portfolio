@@ -61,7 +61,7 @@ const ProjectSection = (): JSX.Element => {
             <p>{data.stack}</p>
           </div>
           <div className={style.repo}>
-            <a href={`${data.url}`}>
+            <a href={`${data.url}`} target="_blank">
               {data.category === "Backend Dev."
                 ? "Open Project Documentation"
                 : "Open Project"}{" "}
