@@ -3,20 +3,20 @@ import meals from "./projects/mealapp.png";
 import airbnb from "./projects/airbnbapp.png";
 import connectapp from "./projects/connectapp.png";
 import varenaapp from "./projects/varenaapp.png";
+import messaging from "./projects/messaging.png"
 
 const project_data = [
   {
-    id: 3,
-    topic: "View Quotes",
-    stack: "React Js, Firebase and Redux",
-    doneAt: "2022",
-    category: "Frontend Dev.",
-    github: "https://github.com/AirZED/quotespage-with-react-router",
-    image: quotes,
-    url: "https://quotespage-with-react-router-4zu6.vercel.app/quotes",
+    id: 9,
+    topic: "Anonymous Messaging API",
+    stack: "Node Js, Express and Mongo DB",
+    doneAt: "2023",
+    category: "Backend Dev.",
+    github: "https://github.com/AirZED/anonymous-messaging-backend",
+    image: messaging,
+    url: "https://mfoniso-anonymous-messaging-app.onrender.com/api/v1/{dynamic parts}",
 
-    description:
-      "View Quotes is a web application hosted on Vercel that is built with ReactJS, React Router, Firebase, and Redux. The platform allows users to view a collection of quotes, leave comments on them, and share them on social media platforms. With a clean and intuitive user interface, users can easily navigate through the platform and interact with different features. Users can browse through a collection of quotes, sort them by author or category, and also search for specific quotes. Users can also leave comments on their favorite quotes and engage in discussions with other users. The platform also features a functionality that allows users to share their favorite quotes on social media platforms such as Twitter and Facebook. Overall, this web application represents a great alternative to other platforms that offer similar functionality. If you're looking for a user-friendly platform to view, comment, and share quotes, View Quotes hosted on Vercel and powered by Firebase, ReactJS, React Router, and Redux is definitely worth checking out.",
+    description: "Building a Secure and Anonymous Messaging Backend. In an age where privacy and confidentiality are paramount, I'm taking on the challenge of constructing a robust and secure backend system. My goal is to create a platform that enables users to exchange messages with complete anonymity and confidence. Empowering Anonymous Communication: My project is dedicated to providing a safe space for individuals to communicate without the fear of revealing their identities. I understand the importance of enabling candid conversations where users can express themselves freely, unencumbered by concerns about personal information exposure. Ensuring Data Security: Security is at the heart of my mission. I am committed to implementing state-of-the-art encryption and data protection measures to safeguard user information and messages. Your privacy is my top priority, and my system is designed to withstand potential threats.
   },
   {
     id: 4,
@@ -90,5 +90,19 @@ const extra = [
     image: "./../assets/projects/mealapp.png",
     description:
       " Built with HTML, CSS, and JavaScript, the platform features an intuitive user interface that allows users to easily book reservations at their preferred hotel. With a responsive design, the website is optimized for use on different devices, including mobile devices, tablets, and desktop computers. Users can easily search for hotels based on their preferred location, check-in and check-out dates, and the number of guests. The platform also features an interactive map that allows users to visualize the location of their preferred hotel. Overall, this web application is a great choice for users who are looking for a seamless hotel reservation experience. With its elegant design and intuitive user interface, it represents a great alternative to other hotel booking platforms. If you're looking for a user-friendly platform to book your next hotel reservation, the Coffee Hotel Site is definitely worth checking out.",
+  },
+
+  {
+    id: 3,
+    topic: "View Quotes",
+    stack: "React Js, Firebase and Redux",
+    doneAt: "2022",
+    category: "Frontend Dev.",
+    github: "https://github.com/AirZED/quotespage-with-react-router",
+    image: quotes,
+    url: "https://quotespage-with-react-router-4zu6.vercel.app/quotes",
+
+    description:
+      "View Quotes is a web application hosted on Vercel that is built with ReactJS, React Router, Firebase, and Redux. The platform allows users to view a collection of quotes, leave comments on them, and share them on social media platforms. With a clean and intuitive user interface, users can easily navigate through the platform and interact with different features. Users can browse through a collection of quotes, sort them by author or category, and also search for specific quotes. Users can also leave comments on their favorite quotes and engage in discussions with other users. The platform also features a functionality that allows users to share their favorite quotes on social media platforms such as Twitter and Facebook. Overall, this web application represents a great alternative to other platforms that offer similar functionality. If you're looking for a user-friendly platform to view, comment, and share quotes, View Quotes hosted on Vercel and powered by Firebase, ReactJS, React Router, and Redux is definitely worth checking out.",
   },
 ];
