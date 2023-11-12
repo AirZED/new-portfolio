@@ -4,8 +4,21 @@ import airbnb from "./projects/airbnbapp.png";
 import connectapp from "./projects/connectapp.png";
 import varenaapp from "./projects/varenaapp.png";
 import messaging from "./projects/messaging.png"
+import ecommerce from "./projects/ecommerce.png"
 
 const project_data = [
+  {
+    id: 2,
+    topic: "Mfoniso Ecommerce API",
+    stack: "Node Js, Express and Mongo DB",
+    doneAt:"2023",
+    category: "Backend Dev",
+    github: "https://github.com/AirZED/eccommerce-backend",
+    image: ecommerce,
+    url: "https://ecommerce-backend-3p2x.onrender.com/api-docs",
+    description:
+      "The e-commerce project is a dynamic and user-friendly online platform designed to facilitate seamless product discovery, selection, and purchase. It empowers users to create, manage, and review products within an engaging and intuitive interface. The platform includes key functionalities such as user registration and authentication, product management enabling the creation, editing, and deletion of products, a shopping cart for adding, updating, and removing products, a secure and streamlined checkout process, user reviews for adding and viewing product feedback, and a search and filter feature for effortless product discovery.",
+  },
   {
     id: 3,
     topic: "Anonymous Messaging API",
