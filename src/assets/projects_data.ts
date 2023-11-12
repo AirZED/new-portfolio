@@ -21,7 +21,7 @@ const project_data = [
   },
   {
     id: 3,
-    topic: "Anonymous Message API",
+    topic: "Anonymous API",
     stack: "Node Js, Express and Mongo DB",
     doneAt: "2023",
     category: "Backend Dev.",
