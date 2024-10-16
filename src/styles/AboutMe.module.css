@@ -1,89 +1,83 @@
 .about {
-    padding: 6rem 4rem 0rem 4rem;
-    color: var(--dark-bg);
-    background: var(--light-bg);
-    height: auto;
+  padding: 6rem 4rem 0rem 4rem;
+  color: var(--dark-bg);
+  background: var(--light-bg);
+  height: auto;
 }
 
-
-.about>.textArea {
-    display: flex;
-    gap: 1rem;
-    align-items: start;
-    justify-content: center;
+.about > .textArea {
+  display: flex;
+  gap: 4rem;
+  align-items: start;
+  justify-content: center;
 }
 
-.about>.textArea>img {
-    height: 20rem;
-    border-radius: 4px;
+.about > .textArea > img {
+  height: 20rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 1rem 1rem rgba(160, 158, 158, 0.397);
 }
 
 .about .text {
-    width: 100%;
+  width: 100%;
 }
 
 .text p {
-    font-size: 1.7rem;
-    font-weight: 400;
-    text-align: justify;
+  font-size: 1.7rem;
+  font-weight: 400;
+  text-align: justify;
 }
 
-.text>p>span {
+.text > p > span {
+  font-weight: 900;
+}
+
+@media (max-width: 1200px) {
+  .about {
+    padding: 4rem 4rem 0rem 4rem;
+  }
+
+  .textArea {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .about {
+    padding: 4rem 1rem 0rem 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about > .textArea {
+    margin: 0;
+  }
+
+  .text > p {
+    /* font-weight: 300; */
+    font-size: 1.3rem;
+  }
+
+  .text span {
     font-weight: 900;
+    font-size: 1.4rem;
+  }
 }
 
-@media (max-width:1200px) {
-    .about {
-        padding: 4rem 4rem 0rem 4rem;
+@media (max-width: 500px) {
+  .text > p {
+    /* font-weight: 300; */
+    font-size: 0.8rem;
+  }
 
-    }
+  .text span {
+    font-weight: 900;
+    font-size: 1rem;
+  }
 
-    .textArea {
-        flex-direction: column;
-    }
-}
-
-@media (max-width:700px) {
-    .about {
-        padding: 4rem 1rem 0rem 1rem;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-    .about>.textArea {
-        margin: 0
-    }
-
-
-    .text>p {
-        /* font-weight: 300; */
-        font-size: 1.3rem;
-    }
-
-    .text span {
-        font-weight: 900;
-        font-size: 1.4rem;
-    }
-
-}
-
-@media (max-width:500px) {
-
-
-    .text>p {
-        /* font-weight: 300; */
-        font-size: 0.8rem;
-    }
-
-    .text span {
-        font-weight: 900;
-        font-size: 1rem;
-    }
-
-    .about>.textArea>img {
-        height: auto;
-        width: 100%;
-        border-radius: 4px;
-    }
+  .about > .textArea > img {
+    height: auto;
+    width: 100%;
+  }
 }
