@@ -47,7 +47,7 @@ const Specialtys = forwardRef((props, ref: any) => {
           class="orange"
           icon={<FaNodeJs />}
           name="Backend Dev"
-          stack="TS, NodeJS, NestJS, ExpressJS"
+          stack="Rust, TS, NodeJS, NestJS, ExpressJS"
           description="Proficient in functional and object-oriented programming paradigms, skilled in languages such as  Python, JavaScript, and TypeScript"
         />
         <Specialty
