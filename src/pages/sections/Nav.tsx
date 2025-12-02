@@ -19,8 +19,6 @@ import {
 import { CgMenuRight } from "react-icons/cg";
 import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
-// Importing style
-import style from "./../../styles/Nav.module.css";
 
 interface NavBarProps {
   componentsRef: ComponentRefs;
@@ -52,8 +50,6 @@ const Nav = ({ componentsRef }: NavBarProps) => {
       setOpenNav(false);
     }
   }, [Contx.pageWidth]);
-
-  const navClassName = `${style.nav} ${style.close}`;
 
   const NavEntities = (
     <Fragment>
@@ -88,22 +84,53 @@ const Nav = ({ componentsRef }: NavBarProps) => {
   const BigScreenNav = () => {
     const navClose = Contx.scrollPosition > window.innerHeight / 4;
 
-    return (
-      <nav className={navClassName}>
-        <h1 className={style.name}>M</h1>
+    if (navClose) {
+      return (
+        <nav className="flex flex-row justify-between items-center fixed top-0 right-0 left-0 z-[101] h-20 w-full p-0 gap-2 bg-[var(--light-bg)] px-36 border-b-[0.5px] border-[#ccc]/50 max-[700px]:px-4">
+          <h1 className="bg-[var(--dark-bg)] text-[var(--light-bg)] text-[1.3rem] h-10 w-[2.3rem] items-center justify-center flex [clip-path:polygon(50%_0,100%_25%,100%_75%,50%_100%,0_75%,0_25%)]">M</h1>
 
-        <div className={style["close-menu"]}>
-          {navClose && (
-            <div className={style["close-nav"]}>
+          <div className="flex items-center">
+            <div className="flex gap-2 items-center list-none max-[700px]:hidden">
               {pathname === "/" && NavEntities}
             </div>
-          )}
 
-          <div className={style["nav-icons"]}>
+            <div className="flex items-center">
+              {!Contx.darkMode && (
+                <DarkModeComponent
+                  type="Dark"
+                  childNode={<MdDarkMode />}
+                  darkModeHandler={darkModeHandler}
+                />
+              )}
+              {Contx.darkMode && (
+                <DarkModeComponent
+                  type="Light"
+                  childNode={<CiLight />}
+                  darkModeHandler={darkModeHandler}
+                />
+              )}
+
+              <CgMenuRight
+                className="hamburger-mobile text-[1.7rem] ml-4 cursor-pointer text-[var(--dark-bg)]"
+                onClick={openNavHandler}
+                aria-label="Open menu"
+              />
+            </div>
+          </div>
+        </nav>
+      );
+    }
+
+    return (
+      <nav className="flex flex-row justify-between items-center fixed top-0 right-0 left-0 z-[101] h-16 w-full p-0 gap-2">
+        <h1 className="bg-[var(--dark-bg)] text-[var(--light-bg)] text-[1.3rem] h-10 w-[2.3rem] items-center justify-center flex [clip-path:polygon(50%_0,100%_25%,100%_75%,50%_100%,0_75%,0_25%)]">M</h1>
+
+        <div className="flex items-center">
+          <div className="flex items-center">
             {!Contx.darkMode && (
               <DarkModeComponent
                 type="Dark"
-                childNode={<MdDarkMode className={style["dark-icon"]} />}
+                childNode={<MdDarkMode />}
                 darkModeHandler={darkModeHandler}
               />
             )}
@@ -116,8 +143,9 @@ const Nav = ({ componentsRef }: NavBarProps) => {
             )}
 
             <CgMenuRight
-              className={style["more-icon"]}
+              className="hamburger-mobile text-[1.7rem] ml-4 cursor-pointer text-[var(--dark-bg)]"
               onClick={openNavHandler}
+              aria-label="Open menu"
             />
           </div>
         </div>
@@ -127,14 +155,14 @@ const Nav = ({ componentsRef }: NavBarProps) => {
 
   const SmallScreenNav = () => {
     return (
-      <nav className={style.nav}>
-        <div className={style.open}>
+      <nav className="flex flex-col justify-between items-center fixed top-0 right-0 left-0 z-[101] h-auto w-full p-0 gap-2 border-b-[0.5px] border-[var(--dark-bg)]">
+        <div className="relative flex flex-col m-0 h-full w-full bg-[var(--nav-bg)] [&>*]:flex [&>*]:items-center">
           <LogoSection openNavHandler={closeNavHandler} />
-          <div className={style["nav-entities"]} onClick={closeNavHandler}>
+          <div className="flex items-center flex-col w-full [&_li]:border-t-[0.5px] [&_li]:border-[var(--dark-bg)] [&_li]:w-full" onClick={closeNavHandler}>
             {pathname === "/" && NavEntities}
           </div>
         </div>
-        <div className={style["more-info"]}>
+        <div className="bg-[var(--nav-bg)] h-16 px-4 w-full [&>div]:p-0 [&>div]:border-none [&>div]:w-full [&>div]:justify-between [&>div_a]:p-0 [&>div_a]:m-0">
           <NavLinks />
         </div>
       </nav>

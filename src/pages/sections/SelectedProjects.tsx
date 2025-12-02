@@ -1,8 +1,5 @@
 // importing from react
 import { forwardRef } from "react";
-
-// importing style
-import style from "./../../styles/SelectedProjects.module.css";
 // importing supporting components
 import Project from "../../components/Project";
 import CollapsibleSection from "../../components/CollapsibleSection";
@@ -11,10 +8,10 @@ import projectData from "../../assets/projects_data";
 
 const SelectedProjects = forwardRef((props, ref: any) => {
   return (
-    <div className={style.projects} id="projects" ref={ref}>
+    <div className="p-0 h-auto" id="projects" ref={ref}>
       <CollapsibleSection title="My Works">
-        <div className={style["projects-header"]}>
-          <span>BUILD YEAR</span>
+        <div className="flex items-baseline justify-end max-[700px]:text-center">
+          <span className="text-[1.5rem] max-[700px]:text-base">BUILD YEAR</span>
         </div>
 
         {projectData.map((el) => (
@@ -31,11 +28,11 @@ const SelectedProjects = forwardRef((props, ref: any) => {
           />
         ))}
 
-        <div className={style["see-more-projects"]}>
-          <h2>Want to see more?</h2>
-          <p>
+        <div className="pt-5 max-[700px]:pt-2">
+          <h2 className="no-underline max-[700px]:text-[1.3rem] max-[500px]:text-[1.1rem]">Want to see more?</h2>
+          <p className="text-[1.5rem] text-[var(--dark-bg)] max-[700px]:text-[1.3rem] max-[500px]:text-[1.1rem]">
             Reach me out at{" "}
-            <a href="mailto:ukpabiomfoniso@gmail.com">ukpabiomfoniso@gmail.com</a>
+            <a href="mailto:ukpabiomfoniso@gmail.com" className="text-[var(--dark-bg)] ml-1 font-black max-[700px]:ml-0">ukpabiomfoniso@gmail.com</a>
           </p>
         </div>
       </CollapsibleSection>

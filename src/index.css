@@ -1,5 +1,26 @@
 @import "tailwindcss";
 
+@theme {
+  --color-dark-bg: var(--dark-bg);
+  --color-light-bg: var(--light-bg);
+  --color-lessdark-bg: var(--lessdark-bg);
+  --color-backdrop: var(--backdrop);
+  --color-accent-1: var(--accent-color1);
+  --color-accent-2: var(--accent-color2);
+  --color-nav-bg: var(--nav-bg);
+  --radius-border: 15px;
+}
+
+.hamburger-mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .hamburger-mobile {
+    display: block;
+  }
+}
+
 @font-face {
   font-family: "PP Mori";
   font-weight: 100;
@@ -47,7 +68,7 @@
 
 html::-webkit-scrollbar {
   width: 0.8rem;
-  color: var(--light-bg);
+  color: var(--color-light-bg);
 }
 
 html::-webkit-scrollbar-track {
@@ -55,18 +76,14 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: var(--dark-bg);
+  background: var(--color-dark-bg);
   border-radius: 0.3rem;
 }
 
 :root {
-  /* font-family: 'PP Mori', sans-serif; */
-  /* font-family: 'Roboto Mono', monospace; */
-  /*   font-family: 'Poppins', sans-serif; */
   font-family: "Manrope", sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  --border-radius: 15px;
   --dark-bg: #000000;
   --light-bg: #e5e5e5;
   --lessdark-bg: #3d3d3d;
@@ -74,6 +91,8 @@ html::-webkit-scrollbar-thumb {
   --accent-color1: #e96928;
   --accent-color2: #6cd8ec;
   --nav-bg: #f8f8f8;
+  --footer-bg: #000000;
+  --footer-text: #e5e5e5;
   text-rendering: optimizeLegibility;
   background-color: var(--light-bg);
   color: var(--dark-bg);
@@ -85,6 +104,8 @@ html::-webkit-scrollbar-thumb {
   --lessdark-bg: #b8b7b7;
   --accent-color: #6cd8ec;
   --nav-bg: #525151;
+  --footer-bg: #111414;
+  --footer-text: #e5e5e5;
 }
 
 * {
@@ -128,5 +149,46 @@ p {
 @media (max-width: 700px) {
   #root>*:not(:last-child) {
     padding-inline: 1rem;
+  }
+}
+
+@keyframes showMoreBtn {
+  0% {
+    bottom: -2rem;
+  }
+
+  50% {
+    bottom: 0rem;
+  }
+
+  100% {
+    bottom: 2rem;
+  }
+}
+
+@keyframes move-up-and-back {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    top: 0;
+    transform: translate(0%, -40%);
+    opacity: 0;
+  }
+
+  51% {
+    transform: translate(0%, 40%);
+    display: block;
+    bottom: 0;
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0%, -10%);
+    transform: none;
+    opacity: 1;
+    bottom: auto;
+    color: var(--accent-color);
   }
 }

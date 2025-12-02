@@ -21,6 +21,8 @@ const ContextProvider = ({ children }: contextProps) => {
     isActive: false,
     project: null,
   });
+  // State to manage collapsible sections - key is section title or id
+  const [collapsibleSections, setCollapsibleSections] = useState<Record<string, boolean>>({});
 
   const darkModeHandler = (): void => {
     setDarkMode((prev) => !prev);
@@ -34,6 +36,29 @@ const ContextProvider = ({ children }: contextProps) => {
 
   const closeProjectHandler = () => {
     setProject({ isActive: false, project: null });
+  };
+
+  const toggleCollapsibleSection = (sectionKey: string, defaultExpanded: boolean) => {
+    setCollapsibleSections((prev) => {
+      // Get current state (use defaultExpanded if not set)
+      const currentState = prev[sectionKey] !== undefined ? prev[sectionKey] : defaultExpanded;
+      // Toggle it
+      return { ...prev, [sectionKey]: !currentState };
+    });
+  };
+
+  const getCollapsibleSectionState = (sectionKey: string, defaultExpanded: boolean): boolean => {
+    // If state exists, use it; otherwise use defaultExpanded
+    return collapsibleSections[sectionKey] !== undefined
+      ? collapsibleSections[sectionKey]
+      : defaultExpanded;
+  };
+
+  const openCollapsibleSection = (sectionKey: string) => {
+    setCollapsibleSections((prev) => {
+      // Open the section (set to true)
+      return { ...prev, [sectionKey]: true };
+    });
   };
 
   useEffect(() => {
@@ -63,6 +88,10 @@ const ContextProvider = ({ children }: contextProps) => {
     project,
     openProjectHandler,
     closeProjectHandler,
+    collapsibleSections,
+    toggleCollapsibleSection,
+    getCollapsibleSectionState,
+    openCollapsibleSection,
   };
 
   return (
