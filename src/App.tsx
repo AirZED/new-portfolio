@@ -1,5 +1,5 @@
-import React, { useContext, useRef, Fragment } from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useContext, useRef, Fragment, useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 // importing Context
 import portfolioContext from "./store/portfolioStore";
@@ -12,6 +12,8 @@ import SelectedProjects from "./pages/sections/SelectedProjects";
 import WorkExperience from "./pages/sections/WorkExperience";
 import ContactMe from "./pages/sections/ContactMe";
 import ProjectSection from "./pages/ProjectSection";
+// importing utilities
+import { scrollToView } from "./utils/utils";
 // importing style
 import "./App.css";
 
@@ -30,6 +32,22 @@ const App = () => {
   const componentsRef = { projectRef, aboutRef, contactRef, expertiseRef, experienceRef };
 
   const HomeRoute = () => {
+    const location = useLocation();
+
+    // Handle navigation from project page to scroll to projects section
+    useEffect(() => {
+      if (location.state && (location.state as any).scrollToProjects) {
+        // Wait for components to render, then scroll
+        setTimeout(() => {
+          if (Contx?.openCollapsibleSection && projectRef.current) {
+            scrollToView(projectRef, Contx.openCollapsibleSection, "My Works");
+          }
+        }, 100);
+        // Clear the state to prevent re-scrolling on re-renders
+        window.history.replaceState({}, document.title);
+      }
+    }, [location.state, Contx]);
+
     return (
       <Fragment>
         <Home componentsRef={componentsRef} />

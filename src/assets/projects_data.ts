@@ -5,13 +5,26 @@ import connectapp from "./projects/connectapp.png";
 import varenaapp from "./projects/varenaapp.png";
 import messaging from "./projects/messaging.png"
 import ecommerce from "./projects/ecommerce.png"
+import hobbliq from "./projects/hobbliq.jpg"
 
 const project_data = [
+  {
+    id: 1,
+    topic: "Hobbliq",
+    stack: "React Js, Express Js, MongoDB, Cloudflare Bucket",
+    doneAt: "2024",
+    category: "Full Stack",
+    github: "",
+    image: hobbliq,
+    url: "https://hobbliq-frontend.vercel.app/",
+    description:
+      "Hobbliq is a comprehensive event ticketing and management web application designed to streamline the entire event planning process. The platform helps event organizers collect attendee information, manage event registrations, and handle all event-related tasks in one unified system. Built with React for the frontend and Express.js for the backend, Hobbliq provides a seamless experience for both event organizers and attendees. The application features integrated task management capabilities, eliminating the need for separate task management tools. With MongoDB as the database and Cloudflare Bucket for file storage, Hobbliq offers a robust and scalable solution for events of all sizes. Organizers can efficiently track attendees, manage event logistics, and coordinate tasks all from a single platform, making event management more efficient and organized.",
+  },
   {
     id: 2,
     topic: "Mfoniso Ecommerce API",
     stack: "Node Js, Express and Mongo DB",
-    doneAt:"2023",
+    doneAt: "2023",
     category: "Backend Dev",
     github: "https://github.com/AirZED/eccommerce-backend",
     image: ecommerce,
@@ -77,8 +90,9 @@ const project_data = [
     image: varenaapp,
     url: "https://varena.app/",
     description:
-      "Varena is a free-to-play play-to-earn online NFT battle royale game where users send their NFT characters to battle each other for ultimate supremacy. The player’s NFTs are made to compete against each other in a constant battle until there remains only one. Just like every other play-to-earn game, there is a reward the users benefit from as they play. In Varena the ultimate winner goes home with a $1000 cash reward. The battle takes place every day at a specific time (i.e 5pm WAT) and the winner is announced every day.",
+      "Varena is a free-to-play play-to-earn online NFT battle royale game where users send their NFT characters to battle each other for ultimate supremacy. The player's NFTs are made to compete against each other in a constant battle until there remains only one. Just like every other play-to-earn game, there is a reward the users benefit from as they play. In Varena the ultimate winner goes home with a $1000 cash reward. The battle takes place every day at a specific time (i.e 5pm WAT) and the winner is announced every day.",
   },
+ 
 ];
 
 export default project_data;
