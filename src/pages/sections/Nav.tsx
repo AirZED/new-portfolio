@@ -57,26 +57,31 @@ const Nav = ({ componentsRef }: NavBarProps) => {
         text="About"
         to="/#info"
         componentRef={componentsRef.aboutRef}
+        sectionTitle="About Mfoniso"
       />
       <EachLink
         text="Expertise"
         to="/#expertise"
         componentRef={componentsRef.expertiseRef}
+        sectionTitle="My Expertise"
       />
       <EachLink
         text="Experience"
         to="/#experience"
         componentRef={componentsRef.experienceRef}
+        sectionTitle="Work Experience"
       />
       <EachLink
         text="Projects"
         to="/#projects"
         componentRef={componentsRef.projectRef}
+        sectionTitle="My Works"
       />
       <EachLink
         text="Contact"
         to="/#contacts"
         componentRef={componentsRef.contactRef}
+        sectionTitle="Contact Me"
       />
     </Fragment>
   );

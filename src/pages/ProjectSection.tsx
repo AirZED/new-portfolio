@@ -20,10 +20,7 @@ const ProjectSection = (): JSX.Element => {
 
   // Scroll to top when component mounts or when id changes
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'instant'
-    });
+    window.scrollTo(0, 0);
   }, [id]);
 
   // Finding index, next and previous
