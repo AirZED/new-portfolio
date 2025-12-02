@@ -68,6 +68,11 @@ const Nav = ({ componentsRef }: NavBarProps) => {
         componentRef={componentsRef.expertiseRef}
       />
       <EachLink
+        text="Experience"
+        to="/#experience"
+        componentRef={componentsRef.experienceRef}
+      />
+      <EachLink
         text="Projects"
         to="/#projects"
         componentRef={componentsRef.projectRef}

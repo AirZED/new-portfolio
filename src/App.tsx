@@ -9,6 +9,7 @@ import Home from "./pages/sections/Home";
 import AboutMe from "./pages/sections/AboutMe";
 import Specialtys from "./pages/sections/Specialty";
 import SelectedProjects from "./pages/sections/SelectedProjects";
+import WorkExperience from "./pages/sections/WorkExperience";
 import ContactMe from "./pages/sections/ContactMe";
 import ProjectSection from "./pages/ProjectSection";
 // importing style
@@ -23,9 +24,10 @@ const App = () => {
   const aboutRef = useRef<ComponentRefs>({});
   const contactRef = useRef<ComponentRefs>({});
   const expertiseRef = useRef<ComponentRefs>({});
+  const experienceRef = useRef<ComponentRefs>({});
   const Contx = useContext(portfolioContext);
 
-  const componentsRef = { projectRef, aboutRef, contactRef, expertiseRef };
+  const componentsRef = { projectRef, aboutRef, contactRef, expertiseRef, experienceRef };
 
   const HomeRoute = () => {
     return (
@@ -33,6 +35,7 @@ const App = () => {
         <Home componentsRef={componentsRef} />
         <AboutMe ref={aboutRef} />
         <Specialtys ref={expertiseRef} />
+        <WorkExperience ref={experienceRef} />
         <SelectedProjects ref={projectRef} />
         <ContactMe ref={contactRef} />
       </Fragment>

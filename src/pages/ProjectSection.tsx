@@ -51,7 +51,7 @@ const ProjectSection = (): JSX.Element => {
         <strong>{data.category}</strong>
         <h1>{data.topic}</h1>
         <p>
-          Home{" > "}My Works{" > "}
+          Home{" > "}My Projects{" > "}
           {data.topic}
         </p>
         <p>{data.description}</p>

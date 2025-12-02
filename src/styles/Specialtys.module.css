@@ -1,14 +1,16 @@
 .specialtys {
-    padding: 6rem 4rem 4rem 4rem;
+    padding: 0;
 }
 
 .specialtys .specialtys-body {
     display: flex;
+    gap: 0;
+    flex-wrap: wrap;
 }
 
 .specialtys .specialtys-body .specialty {
     border: 1px solid var(--dark-bg);
-    width: 50%;
+    flex: 1;
     padding: 2rem;
     height: auto;
 
@@ -62,15 +64,21 @@
 }
 
 @media (max-width:1000px) {
-
+    .specialtys .specialtys-body {
+        flex-direction: column;
+    }
 
     .specialtys .specialtys-body .specialty {
         padding: 1rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 
+    .specialtys .specialtys-body .specialty:last-child {
+        margin-bottom: 0;
     }
 
     .specialty .details h1 {
-
         font-size: 1.7rem;
         line-height: 1.5rem;
     }
@@ -88,23 +96,24 @@
 }
 
 @media (max-width:700px) {
-    .specialtys {
-        padding: 4rem 1rem 0rem 1rem;
-    }
-
     .specialtys .specialtys-body {
         flex-direction: column;
+        gap: 0;
     }
 
     .specialtys .specialtys-body .specialty {
         width: 100%;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
 
-
+    .specialtys .specialtys-body .specialty:last-child {
+        margin-bottom: 0;
     }
 
     .specialty .details h1 {
         font-size: 1.2rem;
-
+        line-height: 1.4rem;
     }
 
     .specialty .topic span {
@@ -112,8 +121,9 @@
     }
 
     .specialty>p {
-        margin: 1rem;
+        margin: 1rem 0.5rem;
         padding: 1rem;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        line-height: 1.4rem;
     }
 }
