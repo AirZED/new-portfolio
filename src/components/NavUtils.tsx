@@ -55,9 +55,15 @@ interface LogoSectionProps {
 
 export const LogoSection = ({ openNavHandler }: LogoSectionProps) => {
   return (
-    <div className="flex items-center justify-between h-16 px-4">
-      <h1 className="bg-[var(--dark-bg)] text-[var(--light-bg)] text-[1.3rem] h-10 w-[2.3rem] items-center justify-center flex [clip-path:polygon(50%_0,100%_25%,100%_75%,50%_100%,0_75%,0_25%)] max-[700px]:text-base">M</h1>
-      <CgClose className="text-[2rem] cursor-pointer" onClick={openNavHandler} />
+    <div className="flex items-center justify-between h-[4.5rem] px-5">
+      <h1 className="bg-[var(--dark-bg)] text-[var(--light-bg)] text-[1.3rem] h-10 w-[2.3rem] items-center justify-center flex [clip-path:polygon(50%_0,100%_25%,100%_75%,50%_100%,0_75%,0_25%)]">M</h1>
+      <button
+        onClick={openNavHandler}
+        aria-label="Close menu"
+        className="w-9 h-9 grid place-items-center rounded-full hover:bg-black/5 cursor-pointer transition-colors duration-200"
+      >
+        <CgClose className="text-[1.4rem] text-[var(--dark-bg)]" />
+      </button>
     </div>
   );
 };
