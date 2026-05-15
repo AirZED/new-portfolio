@@ -28,12 +28,14 @@ const SelectedProjects = forwardRef((props, ref: any) => {
           />
         ))}
 
-        <div className="pt-5 max-[700px]:pt-2">
-          <h2 className="no-underline max-[700px]:text-[1.3rem] max-[500px]:text-[1.1rem]">Want to see more?</h2>
-          <p className="text-[1.5rem] text-[var(--dark-bg)] max-[700px]:text-[1.3rem] max-[500px]:text-[1.1rem]">
-            Reach me out at{" "}
-            <a href="mailto:ukpabiomfoniso@gmail.com" className="text-[var(--dark-bg)] ml-1 font-black max-[700px]:ml-0">ukpabiomfoniso@gmail.com</a>
-          </p>
+        <div className="pt-8 max-[700px]:pt-4 flex flex-col gap-2">
+          <h2 className="text-[1.1rem] opacity-60 font-normal tracking-wide uppercase max-[700px]:text-[0.95rem]">Want to see more?</h2>
+          <a
+            href="mailto:ukpabiomfoniso@gmail.com"
+            className="group font-black text-[2rem] no-underline flex items-center gap-2 w-fit hover:text-[var(--accent-color1)] border-b-2 border-[var(--dark-bg)] hover:border-[var(--accent-color1)] pb-1 transition-all duration-200 max-[700px]:text-[1.3rem] max-[500px]:text-[1.1rem]"
+          >
+            ukpabiomfoniso@gmail.com
+          </a>
         </div>
       </CollapsibleSection>
     </div>

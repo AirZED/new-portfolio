@@ -1,8 +1,6 @@
 import { forwardRef } from "react";
-// importing supporting components
 import CollapsibleSection from "../../components/CollapsibleSection";
-// importing icons
-import { FaReact, FaNodeJs } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaRobot } from "react-icons/fa";
 import { TbCurrencySolana } from "react-icons/tb";
 
 const Specialtys = forwardRef((props, ref: any) => {
@@ -11,28 +9,31 @@ const Specialtys = forwardRef((props, ref: any) => {
     name: string;
     stack: string;
     description: string;
-    class?: string;
+    accent?: "orange" | "teal";
   };
-  const Specialty = ({
-    icon,
-    name,
-    stack,
-    class: className,
-    description,
-  }: SpecialtyProps) => {
+
+  const Specialty = ({ icon, name, stack, description, accent = "orange" }: SpecialtyProps) => {
     return (
-      <div className="border-[0.5px] border-[var(--dark-bg)] flex-1 p-8 h-auto max-[1000px]:p-4 max-[1000px]:w-full max-[1000px]:mb-4 max-[1000px]:last:mb-0 max-[700px]:mb-6 max-[700px]:p-6 max-[700px]:px-4">
+      <div className="border-[0.5px] border-[var(--dark-bg)] p-8 h-auto transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(0,0,0,0.09)] hover:border-[var(--accent-color1)] cursor-default max-[1000px]:p-6 max-[700px]:p-5">
         <div className="flex items-center justify-start gap-2">
-          <span className="text-[3rem] fill-[var(--dark-bg)] inline-grid max-[1000px]:text-[2.5rem] max-[700px]:text-[2rem]">{icon}</span>
+          <span className="text-[3rem] fill-[var(--dark-bg)] inline-grid max-[1000px]:text-[2.5rem] max-[700px]:text-[2rem]">
+            {icon}
+          </span>
           <div className="font-black">
             <h1 className="mt-1 text-[2rem] leading-8 relative w-fit max-[1000px]:text-[1.7rem] max-[1000px]:leading-6 max-[700px]:text-[1.2rem] max-[700px]:leading-[1.4rem]">
               {name}
-              <div className={`h-[0.6rem] w-full bottom-0 absolute -z-10 ${className === "orange" ? "bg-[var(--accent-color2)]" : "bg-[var(--accent-color1)]"}`}></div>
+              <div
+                className={`h-[0.6rem] w-full bottom-0 absolute -z-10 ${
+                  accent === "teal" ? "bg-[var(--accent-color2)]" : "bg-[var(--accent-color1)]"
+                }`}
+              />
             </h1>
-            <h1>{stack}</h1>
+            <p className="text-[1rem] font-normal opacity-70 mt-1 max-[700px]:text-[0.85rem]">{stack}</p>
           </div>
         </div>
-        <p className="border-l-[0.5px] border-[var(--dark-bg)] my-6 mx-6 py-6 px-6 font-medium text-[1.2rem] max-[1000px]:my-5 max-[1000px]:mx-5 max-[1000px]:py-5 max-[1000px]:px-5 max-[1000px]:text-base max-[700px]:my-4 max-[700px]:mx-2 max-[700px]:py-4 max-[700px]:px-4 max-[700px]:text-[0.9rem] max-[700px]:leading-[1.4rem]">{description}</p>
+        <p className="border-l-2 border-[var(--accent-color1)] my-6 mx-2 py-4 px-5 font-medium text-[1.2rem] max-[1000px]:text-base max-[700px]:text-[0.9rem] max-[700px]:leading-[1.4rem]">
+          {description}
+        </p>
       </div>
     );
   };
@@ -40,26 +41,34 @@ const Specialtys = forwardRef((props, ref: any) => {
   return (
     <div className="p-0" ref={ref}>
       <CollapsibleSection title="My Expertise">
-        <div className="flex gap-0 flex-wrap max-[1000px]:flex-col">
+        <div className="grid grid-cols-2 max-[1000px]:grid-cols-1 gap-0">
           <Specialty
-            class="orange"
+            accent="orange"
             icon={<FaNodeJs />}
             name="Backend Dev"
-            stack="C++, Rust, TS, NodeJS, NestJS, ExpressJS"
-            description="Proficient in functional and object-oriented programming paradigms, skilled in languages such as C++, Python, JavaScript, and TypeScript"
+            stack="C++, Rust, TS, Node.js, NestJS, Express.js"
+            description="Proficient in functional and object-oriented programming paradigms, building high-performance APIs and scalable backend systems using Node.js, Rust, and TypeScript."
           />
           <Specialty
+            accent="teal"
             icon={<FaReact />}
             name="Frontend Dev"
-            stack="React, NextJS"
-            description="Enthusiastic about UI/UX design, possessing more than two years of hands-on development expertise in HTML, CSS, JavaScript, as well as React and NextJS frameworks."
+            stack="React, Next.js, TypeScript, Tailwind"
+            description="Passionate about clean, responsive UI/UX — over two years of hands-on experience building production-grade interfaces with React and Next.js."
           />
           <Specialty
-            class="orange"
+            accent="orange"
             icon={<TbCurrencySolana />}
             name="Blockchain Engineer"
-            stack="Solana Rust, Sui Move"
-            description="Experienced blockchain developer with expertise in building decentralized applications on Solana using Rust and developing smart contracts on Sui using Move programming language."
+            stack="Solana Rust, Sui Move, Web3.js, Ethers.js"
+            description="Experienced in building decentralized applications on Solana using Rust and smart contracts on Sui using Move. Full EVM-compatible chain integration via Web3.js and Ethers.js."
+          />
+          <Specialty
+            accent="teal"
+            icon={<FaRobot />}
+            name="AI & Researcher"
+            stack="AI Agents, IoT, Blockchain Research"
+            description="Active researcher across AI systems, IoT architecture, and decentralized technologies. Hands-on experience designing and building intelligent agents and exploring applied AI in systems contexts."
           />
         </div>
       </CollapsibleSection>
