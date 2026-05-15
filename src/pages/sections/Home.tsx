@@ -53,7 +53,7 @@ const Home = ({ componentsRef }: HomeProps) => {
   };
 
   return (
-    <div className="bg-[var(--light-bg)] h-auto pt-32 px-16 pb-0 max-[1200px]:pt-24 max-[1200px]:px-16 max-[700px]:pt-20 max-[700px]:px-4 max-[550px]:pt-16 [&_*]:text-[var(--dark-bg)]">
+    <div className="bg-[var(--light-bg)] h-auto pt-32 px-16 pb-0 max-[1200px]:pt-24 max-[1200px]:px-16 max-[700px]:pt-28 max-[700px]:px-4 max-[550px]:pt-24 [&_*]:text-[var(--dark-bg)]">
       <div>
         <h1 className="leading-[10rem] font-black text-[10rem] tracking-tighter text-[var(--dark-bg)] max-[700px]:text-[7rem] max-[700px]:leading-[7.5rem] max-[700px]:font-bold max-[700px]:mb-2 max-[550px]:text-[3.8rem] max-[550px]:leading-[4.2rem] max-[400px]:text-[3.2rem] max-[400px]:leading-[3.6rem]">
           {FULL_NAME.slice(0, charCount)}
