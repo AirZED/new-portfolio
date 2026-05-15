@@ -46,25 +46,31 @@ const Home = ({ componentsRef }: HomeProps) => {
     return (
       <li id="menu-item" onClick={handleClick} className="flex cursor-pointer items-center my-1 group">
         <div className="invisible w-0 opacity-0 transition-all duration-300 ease-in bg-[var(--dark-bg)] rounded-full mr-0 h-[0.7rem] group-hover:visible group-hover:w-[0.7rem] group-hover:opacity-100 group-hover:mr-4"></div>
-        <h1 className="text-[1.8rem] flex group-hover:text-[var(--lessdark-bg)]">{props.word}</h1>
+        <h1 className="text-[1.8rem] flex group-hover:text-[var(--lessdark-bg)] max-[550px]:text-[1.4rem]">{props.word}</h1>
         <MdOutlineArrowOutward className="ml-2 text-[1.5rem]" />
       </li>
     );
   };
 
   return (
-    <div className="bg-[var(--light-bg)] h-auto pt-32 px-16 pb-0 max-[1200px]:pt-24 max-[1200px]:px-16 max-[700px]:pt-16 max-[700px]:px-4 [&_*]:text-[var(--dark-bg)]">
+    <div className="bg-[var(--light-bg)] h-auto pt-32 px-16 pb-0 max-[1200px]:pt-24 max-[1200px]:px-16 max-[700px]:pt-20 max-[700px]:px-4 max-[550px]:pt-16 [&_*]:text-[var(--dark-bg)]">
       <div>
-        <h1 className="leading-[10rem] font-black text-[10rem] tracking-tighter text-[var(--dark-bg)] max-[700px]:text-[8rem] max-[700px]:leading-[8rem] max-[700px]:font-bold max-[700px]:mb-3 max-[550px]:text-[4.5rem] max-[550px]:leading-[5.5rem] max-[550px]:pt-8">
+        <h1 className="leading-[10rem] font-black text-[10rem] tracking-tighter text-[var(--dark-bg)] max-[700px]:text-[7rem] max-[700px]:leading-[7.5rem] max-[700px]:font-bold max-[700px]:mb-2 max-[550px]:text-[3.8rem] max-[550px]:leading-[4.2rem] max-[400px]:text-[3.2rem] max-[400px]:leading-[3.6rem]">
           {FULL_NAME.slice(0, charCount)}
           {showCursor && (
             <span className="inline-block bg-[var(--dark-bg)] w-[0.05em] h-[0.8em] ml-[0.05em] translate-y-1 animate-blink" />
           )}
         </h1>
-        <p className="text-[4rem] max-[700px]:text-[2.5rem] max-[550px]:text-[1.5rem]">Software Engineer</p>
+        <p className="text-[4rem] max-[700px]:text-[2rem] max-[550px]:text-[1.3rem]">Software Engineer</p>
       </div>
 
       <div className="mt-10 max-[550px]:mt-6">
+        {/* Separator — mobile only */}
+        <div className="hidden max-[700px]:flex items-center gap-3 mb-4">
+          <div className="h-[0.5px] w-full bg-[var(--dark-bg)] opacity-15" />
+          <span className="text-[0.7rem] tracking-[0.2em] uppercase opacity-40 whitespace-nowrap">Navigate</span>
+        </div>
+
         <div className="w-fit max-[550px]:w-full">
           <MenuItem
             word="About Mfoniso"
