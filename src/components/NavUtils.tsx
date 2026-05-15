@@ -42,7 +42,7 @@ export const EachLink = ({ text, componentRef, sectionTitle }: LinkProps): JSX.E
   };
 
   return (
-    <li onClick={handleClick} className="no-underline text-[1.2rem] font-black p-4 flex items-center justify-between text-[var(--dark-bg)] cursor-pointer gap-1 [&>*]:transition-[ease-in_1s] [&>*]:m-0 [&>*]:font-light [&:hover_p]:animate-[move-up-and-back_0.5s_forwards] [&>div:hover_.link-icon]:animate-[move-up-and-back_0.5s]">
+    <li onClick={handleClick} className="no-underline text-[1.2rem] font-black p-4 flex items-center justify-between text-[var(--dark-bg)] cursor-pointer gap-1 [&>*]:transition-[ease-in_1s] [&>*]:m-0 [&>*]:font-light [&:hover_p]:animate-move-up-and-back [&>div:hover_.link-icon]:animate-[move-up-and-back_0.5s]">
       <p>{text}</p>
       <MdOutlineArrowOutward className="link-icon" />
     </li>

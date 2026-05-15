@@ -9,16 +9,9 @@
   --color-accent-2: var(--accent-color2);
   --color-nav-bg: var(--nav-bg);
   --radius-border: 15px;
-}
-
-.hamburger-mobile {
-  display: none;
-}
-
-@media (max-width: 700px) {
-  .hamburger-mobile {
-    display: block;
-  }
+  --animate-show-more-btn: showMoreBtn 0.2s linear;
+  --animate-move-up-and-back: move-up-and-back 0.5s forwards;
+  --animate-blink: blink 0.75s step-end infinite;
 }
 
 @font-face {
@@ -66,20 +59,6 @@
     url("./assets/fonts/ppmori-semibolditalic-webfont.woff") format("woff");
 }
 
-html::-webkit-scrollbar {
-  width: 0.8rem;
-  color: var(--color-light-bg);
-}
-
-html::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-html::-webkit-scrollbar-thumb {
-  background: var(--color-dark-bg);
-  border-radius: 0.3rem;
-}
-
 :root {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
@@ -108,48 +87,69 @@ html::-webkit-scrollbar-thumb {
   --footer-text: #e5e5e5;
 }
 
-* {
-  box-sizing: border-box;
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--lessdark-bg);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+
+  html::-webkit-scrollbar {
+    width: 0.8rem;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: var(--color-dark-bg);
+    border-radius: 0.3rem;
+  }
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-#root>*:not(:last-child) {
+/* Keep unlayered so it takes priority over Tailwind utility padding on section children */
+#root > *:not(:last-child) {
   padding-inline: 9rem;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--lessdark-bg);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
 @media (max-width: 1200px) {
-  #root>*:not(:last-child) {
+  #root > *:not(:last-child) {
     padding-inline: 2rem;
   }
 }
 
 @media (max-width: 700px) {
-  #root>*:not(:last-child) {
+  #root > *:not(:last-child) {
     padding-inline: 1rem;
   }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 @keyframes showMoreBtn {
@@ -185,7 +185,6 @@ p {
   }
 
   100% {
-    transform: translate(0%, -10%);
     transform: none;
     opacity: 1;
     bottom: auto;

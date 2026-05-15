@@ -14,8 +14,6 @@ import ContactMe from "./pages/sections/ContactMe";
 import ProjectSection from "./pages/ProjectSection";
 // importing utilities
 import { scrollToView } from "./utils/utils";
-// importing style
-import "./App.css";
 
 export interface ComponentRefs {
   [key: string]: React.RefObject<any>;

@@ -116,7 +116,7 @@ const Nav = ({ componentsRef }: NavBarProps) => {
               )}
 
               <CgMenuRight
-                className="hamburger-mobile text-[1.7rem] ml-4 cursor-pointer text-[var(--dark-bg)]"
+                className="hidden max-[700px]:block text-[1.7rem] ml-4 cursor-pointer text-[var(--dark-bg)]"
                 onClick={openNavHandler}
                 aria-label="Open menu"
               />
@@ -148,7 +148,7 @@ const Nav = ({ componentsRef }: NavBarProps) => {
             )}
 
             <CgMenuRight
-              className="hamburger-mobile text-[1.7rem] ml-4 cursor-pointer text-[var(--dark-bg)]"
+              className="hidden max-[700px]:block text-[1.7rem] ml-4 cursor-pointer text-[var(--dark-bg)]"
               onClick={openNavHandler}
               aria-label="Open menu"
             />
