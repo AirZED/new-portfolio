@@ -3,6 +3,7 @@ import { forwardRef } from "react";
 import CollapsibleSection from "../../components/CollapsibleSection";
 // importing data
 import workExperienceData from "../../assets/work_experience_data";
+import { formatDuration } from "../../utils/utils";
 
 const WorkExperience = forwardRef((props, ref: any) => {
     return (
@@ -25,7 +26,7 @@ const WorkExperience = forwardRef((props, ref: any) => {
                                         {experience.startDate} - {experience.endDate}
                                     </span>
                                     <span className="text-[1.1rem] opacity-70 max-[700px]:text-base">
-                                        {experience.duration}
+                                        {formatDuration(experience.startDate, experience.endDate)}
                                     </span>
                                 </div>
                             </div>

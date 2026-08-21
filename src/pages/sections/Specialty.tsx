@@ -1,7 +1,6 @@
 import { forwardRef } from "react";
 import CollapsibleSection from "../../components/CollapsibleSection";
-import { FaReact, FaNodeJs, FaRobot } from "react-icons/fa";
-import { TbCurrencySolana } from "react-icons/tb";
+import { FaNodeJs, FaRobot, FaServer } from "react-icons/fa";
 
 const Specialtys = forwardRef((props, ref: any) => {
   type SpecialtyProps = {
@@ -51,17 +50,10 @@ const Specialtys = forwardRef((props, ref: any) => {
           />
           <Specialty
             accent="teal"
-            icon={<FaReact />}
-            name="Frontend Dev"
-            stack="React, Next.js, TypeScript, Tailwind"
-            description="Passionate about clean, responsive UI/UX — over two years of hands-on experience building production-grade interfaces with React and Next.js."
-          />
-          <Specialty
-            accent="orange"
-            icon={<TbCurrencySolana />}
-            name="Blockchain Engineer"
-            stack="Solana Rust, Sui Move, Web3.js, Ethers.js"
-            description="Experienced in building decentralized applications on Solana using Rust and smart contracts on Sui using Move. Full EVM-compatible chain integration via Web3.js and Ethers.js."
+            icon={<FaServer />}
+            name="Platform Engineer"
+            stack="AWS/GCP, Kubernetes, Terraform, Secrets Management, CI/CD"
+            description="Responsible for platform-level decisions across the company — evaluating and choosing infrastructure tooling like secret managers, designing CI/CD pipelines, and building the internal developer platforms and cloud architecture that keep systems secure, reliable, and scalable."
           />
           <Specialty
             accent="teal"

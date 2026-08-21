@@ -30,7 +30,9 @@ const AboutMe = forwardRef((props, ref: any) => {
               <span className="text-[var(--accent-color1)] font-semibold">Rust, C++, TypeScript, Next.js, React,</span> and{" "}
               <span className="text-[var(--accent-color1)] font-semibold">Node.js</span>, Mfoniso brings depth in
               systems-level thinking alongside full-stack fluency and hands-on experience building{" "}
-              <span className="text-[var(--accent-color1)] font-semibold">AI agents</span>. Also an active{" "}
+              <span className="text-[var(--accent-color1)] font-semibold">AI agents</span>. Now also serving as a{" "}
+              <span className="text-[var(--accent-color1)] font-semibold">Platform Engineer</span>, owning company-wide
+              infrastructure decisions — from secrets management to CI/CD and cloud architecture. Also an active{" "}
               <span className="text-[var(--accent-color1)] font-semibold">researcher</span> across{" "}
               <span className="text-[var(--accent-color1)] font-semibold">AI, IoT,</span> and{" "}
               <span className="text-[var(--accent-color1)] font-semibold">Blockchain</span>. A{" "}
@@ -65,7 +67,7 @@ const AboutMe = forwardRef((props, ref: any) => {
 
             {/* Skill tags */}
             <div className="flex flex-wrap gap-3 mt-1">
-              {["Rust", "C++", "TypeScript", "Next.js", "React", "Node.js", "Express.js", "AI Agents", "IoT", "Blockchain", "DSA"].map((skill) => (
+              {["Rust", "C++", "TypeScript", "Next.js", "React", "Node.js", "Express.js", "AI Agents", "IoT", "Blockchain", "DSA", "Kubernetes", "Terraform", "Secrets Management"].map((skill) => (
                 <span
                   key={skill}
                   className="text-[0.95rem] font-medium px-4 py-1.5 border-[0.5px] border-[var(--accent-color1)] text-[var(--accent-color1)] rounded-full tracking-wide"

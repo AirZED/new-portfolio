@@ -5,7 +5,6 @@ export interface WorkExperience {
     employmentType: string;
     startDate: string;
     endDate: string;
-    duration: string;
     location: string;
     description: string;
     skills: string[];
@@ -13,16 +12,36 @@ export interface WorkExperience {
 
 const work_experience_data: WorkExperience[] = [
     {
+        id: 8,
+        company: "Penilabs Innovations Limited",
+        position: "Platform Engineer",
+        employmentType: "Full-time",
+        startDate: "May 2026",
+        endDate: "Present",
+        location: "Uyo, Akwa Ibom State, Nigeria · Remote",
+        description:
+            "Joined as a Rust Backend Developer building fintech and blockchain systems at Penilabs, and have since grown into a Platform Engineer — now responsible for company-wide platform decisions, including evaluating and selecting infrastructure tooling like secret managers, and shaping CI/CD pipelines and cloud architecture.",
+        skills: [
+            "Rust",
+            "Fintech",
+            "Blockchain",
+            "Kubernetes",
+            "Terraform",
+            "Secrets Management",
+            "CI/CD",
+            "Cloud Architecture",
+        ],
+    },
+    {
         id: 1,
         company: "Buildorz",
         position: "Back End Developer",
         employmentType: "Full-time",
         startDate: "Apr 2024",
-        endDate: "Present",
-        duration: "1 yr 9 mos",
+        endDate: "Apr 2026",
         location: "New Delhi, Delhi, India · Remote",
         description:
-            "Integrate smart contracts using Web3.js, and Ethers.js for EVM-compatible chains. Develop scalable backend systems using Node.js, TypeScript, and Express, optimizing blockchain interactions.",
+            "Integrate smart contracts using Web3.js and Ethers.js for EVM-compatible chains, and build smart contracts on the EVM chain. Develop scalable backend systems using Node.js, TypeScript, and Express, optimizing blockchain interactions. Ensure smart contract security best practices, conduct gas optimizations, and integrate with off-chain services. Also build wrappers around LLMs through custom training and prompt engineering.",
         skills: [
             "MySQL",
             "Typescript",
@@ -30,6 +49,10 @@ const work_experience_data: WorkExperience[] = [
             "NodeJs",
             "Web3",
             "Amazon Web Services (AWS)",
+            "Solidity",
+            "Smart Contract Security",
+            "Gas Optimization",
+            "LLM Integration",
         ],
     },
     {
@@ -39,7 +62,6 @@ const work_experience_data: WorkExperience[] = [
         employmentType: "Seasonal",
         startDate: "Aug 2023",
         endDate: "Present",
-        duration: "2 yrs 5 mos",
         location: "Nigeria · On-site",
         description:
             "Work with my Co-Dev Lead, the Student Lead and other Leads on sensitizing, organizing hackathons and educating newbies and tech enthusiasts on what works and how to get started in tech.",
@@ -57,7 +79,6 @@ const work_experience_data: WorkExperience[] = [
         employmentType: "Internship",
         startDate: "Mar 2024",
         endDate: "Aug 2024",
-        duration: "6 mos",
         location: "Uyo, Akwa Ibom State, Nigeria · On-site",
         description:
             "I primarily enjoyed this role as I got to work with newbies in the web development space and bringing them up the speed with the noise and quiet",
@@ -78,7 +99,6 @@ const work_experience_data: WorkExperience[] = [
         employmentType: "Internship",
         startDate: "Jul 2023",
         endDate: "Dec 2023",
-        duration: "6 mos",
         location: "Nigeria · Hybrid",
         description:
             "I craft visually stunning and user-friendly web interfaces that captivate audiences. My expertise in responsive design ensures an optimal user experience across all devices. I collaborate closely with cross-functional teams to align web development with business goals. My passion for performance optimization leads to faster-loading, more efficient websites. I stay at the forefront of industry trends to ensure we're using the latest tools and technologies.",
@@ -91,7 +111,6 @@ const work_experience_data: WorkExperience[] = [
         employmentType: "Internship",
         startDate: "Sep 2023",
         endDate: "Oct 2023",
-        duration: "2 mos",
         location: "Nigeria · Remote",
         description:
             "HNG Internship help mold me as a Backend Engineer into a detailed, result oriented and time conscious Backend Engineer with their rigorous but amazing Internship build, and hands on experience with building real life application and also collaborating with other engineers",
@@ -104,7 +123,6 @@ const work_experience_data: WorkExperience[] = [
         employmentType: "Internship",
         startDate: "Oct 2022",
         endDate: "Dec 2022",
-        duration: "3 mos",
         location: "Uyo, Akwa Ibom State, Nigeria",
         description: "",
         skills: [
@@ -122,7 +140,6 @@ const work_experience_data: WorkExperience[] = [
         employmentType: "Internship",
         startDate: "Jul 2022",
         endDate: "Nov 2022",
-        duration: "5 mos",
         location: "Uyo, Akwa Ibom State, Nigeria",
         description: "Project Create 3.0",
         skills: [
